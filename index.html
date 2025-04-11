@@ -73,7 +73,7 @@
 </head>
 <body class="bg-octo-blue text-octo-yellow font-inter">
     <!-- Cabeçalho com Imagem de Fundo e Layout Dividido -->
-    <header class="relative h-[50vh] md:h-screen min-h-[600px] md:min-h-[700px] overflow-hidden">
+    <header class="relative h-[50vh] md:h-screen min-h-[600px] md:min-h-[700px] overflow-hidden flex flex-col">
         <!-- Background base e estrutura de layout -->
         <div class="absolute inset-0">
             <!-- Fundo base azul -->
@@ -97,7 +97,7 @@
         </div>
         
         <!-- Conteúdo do header -->
-        <div class="relative z-20">
+        <div class="relative z-20 flex flex-col flex-grow">
             <!-- Barra de navegação -->
             <div class="container mx-auto px-4 py-6">
                 <div class="flex justify-between items-center">
@@ -133,7 +133,7 @@
             </div>
             
             <!-- Área de headline e CTA -->
-            <div class="container mx-auto px-4 flex flex-col justify-start mt-16 md:mt-32 lg:mt-28">
+            <div class="container mx-auto px-4 flex flex-col justify-center flex-grow">
                 <div class="max-w-xl p-2">
                     <h1 class="text-4xl md:text-6xl font-bebas uppercase leading-tight mb-4 md:mb-6 text-white">
                         Soluções Estratégicas com <span class="text-octo-yellow">Múltiplos Tentáculos</span>
