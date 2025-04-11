@@ -73,14 +73,14 @@
 </head>
 <body class="bg-octo-blue text-octo-yellow font-inter">
     <!-- Cabeçalho com Imagem de Fundo e Layout Dividido -->
-    <header class="relative h-screen min-h-[700px] overflow-hidden">
+    <header class="relative h-[50vh] md:h-screen min-h-[600px] md:min-h-[700px] overflow-hidden">
         <!-- Background base e estrutura de layout -->
         <div class="absolute inset-0">
             <!-- Fundo base azul -->
             <div class="absolute inset-0 bg-octo-blue z-0"></div>
             
-            <!-- Imagem na metade direita com gradiente suave -->
-            <div class="absolute top-0 bottom-0 right-0 w-full md:w-2/3 lg:w-3/5 overflow-hidden">
+            <!-- Imagem na metade direita com gradiente suave - somente desktop -->
+            <div class="absolute top-0 bottom-0 right-0 w-full md:w-2/3 lg:w-3/5 overflow-hidden hidden md:block">
                 <!-- Gradiente de transição largo e suave -->
                 <div class="absolute inset-0 bg-gradient-to-r from-octo-blue via-octo-blue/10 to-transparent z-10"></div>
                 
@@ -92,21 +92,12 @@
                 ></div>
             </div>
             
-            <!-- Gradiente adicional para suavizar ainda mais a transição -->
-            <div class="absolute inset-0 bg-gradient-to-r from-octo-blue via-octo-blue/95 to-transparent md:w-[55%] z-5"></div>
-        </div>
-        
-        <!-- Versão mobile da imagem (aparece abaixo do conteúdo) -->
-        <div 
-            class="absolute bottom-0 left-0 right-0 h-1/2 bg-cover bg-center md:hidden" 
-            style="background-image: url('assets/images/dupla.jpg');"
-            aria-label="Equipe octo.hub trabalhando em conjunto"
-        >
-            <div class="absolute inset-0 bg-gradient-to-b from-octo-blue via-octo-blue/70 to-transparent"></div>
+            <!-- Gradiente adicional para suavizar ainda mais a transição - somente desktop -->
+            <div class="absolute inset-0 bg-gradient-to-r from-octo-blue via-octo-blue/95 to-transparent md:w-[55%] z-5 hidden md:block"></div>
         </div>
         
         <!-- Conteúdo do header -->
-        <div class="relative z-20 h-full w-full flex flex-col">
+        <div class="relative z-20">
             <!-- Barra de navegação -->
             <div class="container mx-auto px-4 py-6">
                 <div class="flex justify-between items-center">
@@ -142,19 +133,19 @@
             </div>
             
             <!-- Área de headline e CTA -->
-            <div class="container mx-auto px-4 flex flex-col justify-center h-full">
-                <div class="max-w-xl mt-12 md:mt-0">
-                    <h1 class="text-4xl md:text-6xl font-bebas uppercase leading-tight mb-6 text-white">
+            <div class="container mx-auto px-4 flex flex-col justify-start mt-16 md:mt-32 lg:mt-28">
+                <div class="max-w-xl p-2">
+                    <h1 class="text-4xl md:text-6xl font-bebas uppercase leading-tight mb-4 md:mb-6 text-white">
                         Soluções Estratégicas com <span class="text-octo-yellow">Múltiplos Tentáculos</span>
                     </h1>
-                    <p class="text-lg md:text-xl mb-8 text-octo-yellow/90">
+                    <p class="text-lg md:text-xl mb-6 md:mb-8 text-octo-yellow/90">
                         Na octo.hub, cada ideia conecta-se ao resultado. Inteligência, criatividade e performance num só lugar.
                     </p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#contato" class="inline-block bg-octo-green text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1">
+                        <a href="#contato" class="inline-block bg-octo-green text-white px-6 py-3 md:px-8 md:py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1">
                             Fale com a gente
                         </a>
-                        <a href="#servicos" class="inline-block border-2 border-octo-yellow/60 text-octo-yellow px-8 py-3 rounded-full text-lg font-medium hover:border-octo-yellow hover:text-white transition-all">
+                        <a href="#servicos" class="inline-block border-2 border-octo-yellow/60 text-octo-yellow px-6 py-3 md:px-8 md:py-3 rounded-full text-lg font-medium hover:border-octo-yellow hover:text-white transition-all">
                             Conheça os serviços
                         </a>
                     </div>
@@ -410,10 +401,10 @@
                     <!-- Membro 1 -->
                     <div class="bg-octo-blue/50 rounded-xl p-6 backdrop-blur-sm border border-octo-yellow/10 hover:border-octo-green transition-all group">
                         <div class="mb-6 overflow-hidden rounded-full mx-auto w-48 h-48 relative">
-                            <img src="assets/images/pessoa.jpg" alt="Carolina Mendes" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="assets/images/victor.jpg" alt="Victor Braga" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-space mb-1">Carolina Mendes</h3>
+                            <h3 class="text-xl font-space mb-1">Victor Braga</h3>
                             <p class="text-octo-green font-medium mb-3">CEO & Estrategista Digital</p>
                             <p class="text-sm text-octo-yellow/80 mb-4">
                                 Especialista em negócios digitais e gestão estratégica, com 12 anos de experiência em transformação digital.
@@ -435,10 +426,10 @@
                     <!-- Membro 2 -->
                     <div class="bg-octo-blue/50 rounded-xl p-6 backdrop-blur-sm border border-octo-yellow/10 hover:border-octo-green transition-all group">
                         <div class="mb-6 overflow-hidden rounded-full mx-auto w-48 h-48 relative">
-                            <img src="assets/images/pessoa.jpg" alt="Rafael Oliveira" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="assets/images/julia.jpg" alt="Julia Vergamini" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-space mb-1">Rafael Oliveira</h3>
+                            <h3 class="text-xl font-space mb-1">Julia Vergamini</h3>
                             <p class="text-octo-green font-medium mb-3">Diretor de Tecnologia</p>
                             <p class="text-sm text-octo-yellow/80 mb-4">
                                 Desenvolvedor full-stack com expertise em arquitetura de sistemas e soluções avançadas para negócios.
@@ -460,10 +451,10 @@
                     <!-- Membro 3 -->
                     <div class="bg-octo-blue/50 rounded-xl p-6 backdrop-blur-sm border border-octo-yellow/10 hover:border-octo-green transition-all group">
                         <div class="mb-6 overflow-hidden rounded-full mx-auto w-48 h-48 relative">
-                            <img src="assets/images/pessoa.jpg" alt="Mariana Costa" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="assets/images/gustavo.jpg" alt="Gustavo Scheffel" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-space mb-1">Mariana Costa</h3>
+                            <h3 class="text-xl font-space mb-1">Gustavo Scheffel</h3>
                             <p class="text-octo-green font-medium mb-3">Diretora Criativa</p>
                             <p class="text-sm text-octo-yellow/80 mb-4">
                                 Especialista em design de experiência e branding, com foco em soluções inovadoras e storytelling.
@@ -485,10 +476,10 @@
                     <!-- Membro 4 -->
                     <div class="bg-octo-blue/50 rounded-xl p-6 backdrop-blur-sm border border-octo-yellow/10 hover:border-octo-green transition-all group">
                         <div class="mb-6 overflow-hidden rounded-full mx-auto w-48 h-48 relative">
-                            <img src="assets/images/pessoa.jpg" alt="André Santos" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="assets/images/evelyn.jpg" alt="Evelyn Santos" class="w-full h-full object-cover object-center rounded-full transform group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="text-center">
-                            <h3 class="text-xl font-space mb-1">André Santos</h3>
+                            <h3 class="text-xl font-space mb-1">Evelyn Santos</h3>
                             <p class="text-octo-green font-medium mb-3">Diretor de Marketing</p>
                             <p class="text-sm text-octo-yellow/80 mb-4">
                                 Especialista em estratégias de crescimento, performance digital e análise de dados para resultados.
@@ -601,14 +592,7 @@
                                         <i class="fas fa-phone text-octo-green"></i>
                                     </div>
                                     <span>+55 (11) 98765-4321</span>
-                                </div>
-                                
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 bg-octo-green/20 rounded-full flex items-center justify-center mr-4">
-                                        <i class="fas fa-map-marker-alt text-octo-green"></i>
-                                    </div>
-                                    <span>São Paulo - SP, Brasil</span>
-                                </div>
+                                </div>                
                             </div>
                             
                             <div class="flex space-x-4">
@@ -668,18 +652,18 @@
     <!-- Rodapé -->
     <footer class="bg-octo-blue/90 border-t border-octo-yellow/10 py-8 px-4">
         <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
                     <a href="#" class="inline-block">
-                        <img src="assets/logo/logo.png" alt="octo.hub Logo" class="h-12 mb-3">
+                        <img src="assets/logo/logo.png" alt="octo.hub Logo" class="h-12 mb-3 mx-auto md:mx-0">
                     </a>
                     <p class="text-sm text-octo-yellow/70">
                         Conectando inteligência e estratégia para seu negócio.
                     </p>
                 </div>
                 
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div>
+                <div class="flex flex-col sm:flex-row gap-8 text-center sm:text-left">
+                    <div class="mb-6 sm:mb-0">
                         <h3 class="text-sm font-medium uppercase mb-4">Links Rápidos</h3>
                         <ul class="space-y-2 text-sm text-octo-yellow/70">
                             <li><a href="#" class="hover:text-octo-yellow transition-colors">Início</a></li>
@@ -703,12 +687,12 @@
             </div>
             
             <div class="border-t border-octo-yellow/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-xs text-octo-yellow/60">
+                <p class="text-xs text-octo-yellow/60 text-center md:text-left mb-4 md:mb-0">
                     &copy; 2023 octo.hub. Todos os direitos reservados.
                 </p>
                 
-                <div class="mt-4 md:mt-0">
-                    <a href="#" class="text-xs text-octo-yellow/60 hover:text-octo-yellow mr-4 transition-colors">Termos de Uso</a>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="#" class="text-xs text-octo-yellow/60 hover:text-octo-yellow transition-colors">Termos de Uso</a>
                     <a href="#" class="text-xs text-octo-yellow/60 hover:text-octo-yellow transition-colors">Política de Privacidade</a>
                 </div>
             </div>
