@@ -69,6 +69,199 @@
             position: relative;
             z-index: 10;
         }
+        
+        /* Cores personalizadas */
+        :root {
+            --octo-blue: #051d40;
+            --octo-green: #10b981;
+            --octo-yellow: #fbbf24;
+        }
+        
+        /* Classes de cores personalizadas */
+        .bg-octo-blue {
+            background-color: var(--octo-blue);
+        }
+        
+        .bg-octo-green {
+            background-color: var(--octo-green);
+        }
+        
+        .bg-octo-yellow {
+            background-color: var(--octo-yellow);
+        }
+        
+        .text-octo-blue {
+            color: var(--octo-blue);
+        }
+        
+        .text-octo-green {
+            color: var(--octo-green);
+        }
+        
+        .text-octo-yellow {
+            color: var(--octo-yellow);
+        }
+        
+        .border-octo-blue {
+            border-color: var(--octo-blue);
+        }
+        
+        .border-octo-green {
+            border-color: var(--octo-green);
+        }
+        
+        .border-octo-yellow {
+            border-color: var(--octo-yellow);
+        }
+        
+        /* Fontes personalizadas */
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        
+        .font-space {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger-wrapper {
+                display: block;
+            }
+        }
+        
+        .hamburger-button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .hamburger-icon {
+            position: relative;
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-icon::before,
+        .hamburger-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-icon::before {
+            transform: translateY(-8px);
+        }
+        
+        .hamburger-icon::after {
+            transform: translateY(8px);
+        }
+        
+        .hamburger-button.active .hamburger-icon {
+            background-color: transparent;
+        }
+        
+        .hamburger-button.active .hamburger-icon::before {
+            transform: translateY(0) rotate(45deg);
+        }
+        
+        .hamburger-button.active .hamburger-icon::after {
+            transform: translateY(0) rotate(-45deg);
+        }
+        
+        /* Mobile Menu Styles */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #0e2026;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            backdrop-filter: blur(8px);
+        }
+        
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+        
+        #mobile-menu a {
+            font-size: 1.25rem;
+            margin: 15px 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition-delay: calc(var(--i) * 0.1s);
+        }
+        
+        #mobile-menu.active a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        #mobile-menu a.cta-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+        }
+        
+        /* Área de headline e CTA */
+        .header-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .header-content .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--octo-green);
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .header-content .cta-button:hover {
+            background-color: var(--octo-green-hover);
+        }
     </style>
 </head>
 <body class="bg-octo-blue text-octo-yellow font-inter">
@@ -105,11 +298,6 @@
                         <img src="assets/logo/logo.png" alt="octo.hub Logo" class="h-12 mr-2">
                     </a>
                     
-                    <!-- Menu Mobile -->
-                    <button id="menu-toggle" class="md:hidden text-octo-yellow focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                    
                     <!-- Menu Desktop -->
                     <nav class="hidden md:flex items-center space-x-8">
                         <a href="#sobre" class="text-octo-yellow hover:text-white transition-colors font-medium xl:text-lg">Sobre</a>
@@ -120,15 +308,20 @@
                     </nav>
                 </div>
                 
-                <!-- Menu Mobile Dropdown -->
-                <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                    <div class="flex flex-col space-y-4 bg-octo-blue/90 p-4 rounded-lg backdrop-blur-sm">
-                        <a href="#sobre" class="text-octo-yellow hover:text-white transition-colors xl:text-lg">Sobre</a>
-                        <a href="#servicos" class="text-octo-yellow hover:text-white transition-colors xl:text-lg">Serviços</a>
-                        <a href="#equipe" class="text-octo-yellow hover:text-white transition-colors xl:text-lg">Equipe</a>
-                        <a href="#diferencial" class="text-octo-yellow hover:text-white transition-colors xl:text-lg">Diferencial</a>
-                        <a href="#contato" class="bg-octo-green text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition-colors text-center xl:text-lg">Contato</a>
+                <!-- Floating Hamburger Menu Button -->
+                <div class="hamburger-wrapper">
+                    <div class="hamburger-button bg-octo-green" id="menu-toggle">
+                        <span class="hamburger-icon"></span>
                     </div>
+                </div>
+                
+                <!-- Mobile Menu Overlay -->
+                <nav id="mobile-menu" class="md:hidden">
+                    <a href="#sobre" class="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style="--i:1">Sobre</a>
+                    <a href="#servicos" class="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style="--i:2">Serviços</a>
+                    <a href="#equipe" class="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style="--i:3">Equipe</a>
+                    <a href="#diferencial" class="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style="--i:4">Diferencial</a>
+                    <a href="#contato" class="bg-octo-green text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors text-center text-xl cta-button" style="--i:5">Contato</a>
                 </nav>
             </div>
             
@@ -657,7 +850,7 @@
                     <a href="#" class="inline-block">
                         <img src="assets/logo/logo.png" alt="octo.hub Logo" class="h-12 mb-3 mx-auto md:mx-0">
                     </a>
-                    <p class="text-sm text-octo-yellow/70 xl:text-lg">
+                    <p class="text-xs text-octo-yellow/70 xl:text-lg">
                         Conectando inteligência e estratégia para seu negócio.
                     </p>
                 </div>
@@ -702,36 +895,45 @@
     <!-- Script para menu mobile -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Toggle mobile menu
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
             
             menuToggle.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                menuToggle.innerHTML = isOpen 
-                    ? '<i class="fas fa-times text-xl"></i>' 
-                    : '<i class="fas fa-bars text-xl"></i>';
+                mobileMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                document.body.classList.toggle('overflow-hidden');
             });
             
-            // Fechar menu ao clicar em links
-            const mobileLinks = mobileMenu.querySelectorAll('a');
+            // Close mobile menu when a link is clicked
             mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    menuToggle.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                link.addEventListener('click', function(e) {
+                    // Close the menu
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    document.body.classList.remove('overflow-hidden');
+                    
+                    // Smooth scroll to section
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        setTimeout(() => {
+                            const headerOffset = 80; // Adjust this value as needed
+                            const elementPosition = targetSection.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }, 300); // Small delay to allow menu to close first
+                    }
                 });
             });
-            
-            // Efeito de parallax ao rolar
-            window.addEventListener('scroll', function() {
-                const parallaxElements = document.querySelectorAll('.parallax-bg');
-                let scrollPosition = window.pageYOffset;
-                
-                parallaxElements.forEach(element => {
-                    // Criar efeito de movimento lento (ajuste 0.5 para mais ou menos movimento)
-                    element.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-                });
-            });
+    
         });
     </script>
 </body>
