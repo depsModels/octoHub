@@ -6,60 +6,12 @@ main {
 
 /* Color variables */
 :root {
-  --octo-blue: #051d40;
-  --octo-green: #10b981;
-  --octo-yellow: #fbbf24;
+  --octo-blue: #152D35;
+  --octo-green: #03493D;
+  --octo-yellow: #F9F9E0;
 }
 
-/* Background colors */
-.bg-octo-blue {
-  background-color: var(--octo-blue);
-}
-
-.bg-octo-green {
-  background-color: var(--octo-green);
-}
-
-.bg-octo-yellow {
-  background-color: var(--octo-yellow);
-}
-
-/* Text colors */
-.text-octo-blue {
-  color: var(--octo-blue);
-}
-
-.text-octo-green {
-  color: var(--octo-green);
-}
-
-.text-octo-yellow {
-  color: var(--octo-yellow);
-}
-
-/* Border colors */
-.border-octo-blue {
-  border-color: var(--octo-blue);
-}
-
-.border-octo-green {
-  border-color: var(--octo-green);
-}
-
-.border-octo-yellow {
-  border-color: var(--octo-yellow);
-}
-
-/* Fonts */
-.font-bebas {
-  font-family: "Bebas Neue", sans-serif;
-}
-
-.font-space {
-  font-family: "Space Grotesk", sans-serif;
-}
-
-/* Mobile menu and hamburger styles */
+/* Mobile menu */
 .hamburger-wrapper {
   position: fixed;
   top: 20px;
@@ -165,16 +117,17 @@ main {
   transform: translateY(0);
 }
 
-/* Header content styles */
-.header-content .cta-button {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+/* Form focus effects */
+.input-focus-effect {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(249, 249, 224, 0);
   border-radius: 0.5rem;
-  background-color: var(--octo-green);
-  color: white;
-  transition: background-color 0.3s ease;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
-.header-content .cta-button:hover {
-  background-color: var(--octo-green-hover);
+.group-focus-within .input-focus-effect {
+  border-color: rgba(249, 249, 224, 0.3);
+  box-shadow: 0 0 10px rgba(249, 249, 224, 0.1);
 }
