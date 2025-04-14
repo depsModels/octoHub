@@ -1,0 +1,14 @@
+{
+  "port": 5500,
+  "host": "localhost",
+  "root": "./",
+  "open": true,
+  "file": "index.html",
+  "wait": 1000,
+  "mount": {
+    "/": "./",
+    "/src/styles/output.css": "./src/styles/output.css"
+  },
+  "logLevel": 2,
+  "middleware": []
+} 
