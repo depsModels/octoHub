@@ -1,5 +1,6 @@
 # Dependências
 node_modules/
+package-lock.json
 
 # Arquivos de build e saída
 src/styles/output.css
