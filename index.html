@@ -1238,7 +1238,7 @@
           <p
             class="text-xs text-octo-yellow/60 text-center md:text-left mb-4 md:mb-0 xl:text-base"
           >
-            &copy; 2023 octo.hub. Todos os direitos reservados.
+            &copy; <span id="currentYear"></span> octo.hub. Todos os direitos reservados.
           </p>
 
           <div class="flex justify-center md:justify-end space-x-4">
@@ -1300,6 +1300,9 @@
             }
           });
         });
+        
+        // Atualiza o ano atual no footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
       });
     </script>
   </body>
