@@ -1,10 +1,8 @@
 # Dependências
 node_modules/
-package-lock.json
 
-# Arquivos de build
-dist/
-build/
+# Arquivos de build e saída
+src/styles/output.css
 .DS_Store
 
 # Arquivos de ambiente
@@ -43,4 +41,14 @@ coverage/
 
 # Arquivos de deploy
 .deploy/
-.deploy_*/ 
+.deploy_*/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Arquivos de configuração local
+.liveserverrc 
