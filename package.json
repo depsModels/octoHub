@@ -3,24 +3,45 @@
   "version": "1.0.0",
   "description": "octo.hub - Soluções estratégicas e conectadas para seu negócio.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch --poll",
-    "build": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --minify"
+    "build": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --minify",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/depsModels/octoHub.git"
-  },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "marketing",
+    "digital",
+    "estratégia",
+    "desenvolvimento web",
+    "design"
+  ],
+  "contributors": [
+    {
+      "name": "Miguel Leonardo Strapazon Lewandowski",
+      "email": "miguelstrapazonl@gmail.com",
+      "homepage": "https://depsmodels.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Raul Lize Teixeira",
+      "email": "raullizeteixeira@gmail.com",
+      "homepage": "https://depsmodels.com",
+      "role": "Developer"
+    }
+  ],
+  "author": "octo.hub",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/depsModels/octoHub/issues"
-  },
-  "homepage": "https://github.com/depsModels/octoHub#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "postcss": "^8.5.3",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.17"
   }
 }
