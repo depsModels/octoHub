@@ -6,9 +6,9 @@ main {
 
 /* Color variables */
 :root {
-  --octo-blue: #152D35;
-  --octo-green: #03493D;
-  --octo-yellow: #F9F9E0;
+  --octo-blue: #152d35;
+  --octo-green: #03493d;
+  --octo-yellow: #f9f9e0;
 }
 
 /* Mobile menu */
@@ -52,7 +52,7 @@ main {
 
 .hamburger-icon::before,
 .hamburger-icon::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 24px;
   height: 2px;
