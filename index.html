@@ -39,9 +39,7 @@
     <link rel="stylesheet" href="src/styles/styles.css" />
     <link rel="stylesheet" href="src/styles/styles.css" />
   </head>
-  <body
-    class="bg-gradient-to-br from-octo-green/95 via-octo-blue/100 to-octo-green/90 text-octo-yellow font-inter overflow-x-hidden"
-  >
+  <body class="bg-gradient-to-br from-octo-green/95 via-octo-blue/100 to-octo-green/90 text-octo-yellow font-inter overflow-x-hidden">
     <div
       class="absolute inset-0 w-full h-full overflow-hidden -z-10 opacity-10 pointer-events-none"
     >
@@ -188,14 +186,13 @@
         </div>
 
         <div class="container mx-auto px-4 flex flex-col justify-center flex-grow">
-          <div class="max-w-xl p-2">
+          <div class="max-w-3xl p-2">
             <h1
               class="text-4xl md:text-6xl xl:text-7xl font-bebas uppercase leading-tight mb-4 md:mb-6 text-white"
             >
               Especialistas em Captação de Clientes
-              <span class="text-octo-yellow">para Empresas</span>
             </h1>
-            <p class="text-lg md:text-xl xl:text-3xl mb-6 md:mb-8 text-octo-yellow/90">
+            <p class="text-lg md:text-xl xl:text-2xl mb-6 md:mb-8 text-octo-yellow/90">
               Na octo.hub, ajudamos negócios a estruturarem um processo comercial eficiente para
               atrair mais clientes, aumentar as vendas e escalar seus resultados. Criamos soluções
               completas de marketing digital com foco em performance e crescimento real.
@@ -203,15 +200,21 @@
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
                 href="#contato"
-                class="inline-block bg-octo-green text-white px-6 py-3 rounded-full text-lg md:text-lg xl:text-xl font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
+                class="inline-flex items-center justify-center bg-octo-yellow text-octo-blue px-6 py-3 rounded-full text-lg md:text-lg xl:text-xl font-medium transition-all transform hover:-translate-y-1 hover:scale-105 hover:bg-octo-green hover:text-white group shadow-md"
               >
-                Fale com a gente
+                <span class="relative z-10">Fale com a gente</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
               <a
-                href="#servicos"
-                class="inline-block border-2 border-octo-yellow/60 text-octo-yellow px-6 py-3 md:px-8 md:py-3 rounded-full text-lg md:text-lg xl:text-xl font-medium hover:border-octo-yellow hover:text-white transition-all"
+                href="#porque-escolher"
+                class="inline-flex items-center justify-center border-2 border-octo-yellow/60 text-octo-yellow px-6 py-3 md:px-8 md:py-3 rounded-full text-lg md:text-lg xl:text-xl font-medium hover:border-octo-yellow hover:text-white transition-all group"
               >
-                Conheça os serviços
+                <span>Conheça os serviços</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
             </div>
           </div>
@@ -234,17 +237,24 @@
 
         <div class="container mx-auto relative z-10">
           <div class="text-center mb-10 sm:mb-12 md:mb-16 relative">
-            <span
-              class="absolute -top-12 left-1/2 transform -translate-x-1/2 text-6xl sm:text-7xl md:text-9xl text-octo-green/5 font-bebas hidden sm:block"
-              >POR QUE</span
-            >
+
             <h2 class="text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4 relative z-10 animate-fade-in">
               Por que escolher a <span class="text-octo-yellow relative">octo<span class="absolute -bottom-1 left-0 w-full h-1 bg-octo-yellow/30"></span></span>?
             </h2>
             <div class="w-24 h-1 bg-gradient-to-r from-octo-green via-octo-yellow to-octo-green mx-auto mb-6"></div>
-            <p class="max-w-2xl mx-auto text-sm sm:text-base xl:text-xl text-octo-yellow/90">
+            <p class="max-w-2xl mx-auto text-sm sm:text-base xl:text-xl text-octo-yellow/90 mb-8">
               Oferecemos soluções integradas que trazem resultados reais para o seu negócio.
             </p>
+            
+            <!-- Ajustar o botão para novo estilo de hover -->
+            <div class="flex justify-center">
+              <a href="#como-funciona" class="inline-flex items-center bg-octo-yellow text-octo-blue px-8 py-3 rounded-full text-lg font-medium transition-all transform hover:-translate-y-1 hover:scale-105 hover:bg-octo-green hover:text-white group shadow-md">
+                <span class="relative z-10">Descubra Nossas Soluções</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <!-- Mobile: Imagem em cima, cards embaixo | Desktop: Cards esquerda, imagem direita -->
@@ -259,7 +269,7 @@
                   <img
                     src="src/assets/images/grupo2.jpg"
                     alt="Equipe octo.hub em ação"
-                    class="w-full h-[420px] sm:h-[450px] object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                    class="w-full h-[420px] sm:h-[450px] object-cover object-center object-top transform group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div
@@ -268,7 +278,7 @@
                   <div
                     class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-center opacity-100 transform transition-all duration-500"
                   >
-                    <p class="text-octo-yellow text-sm sm:text-base md:text-lg font-space">
+                    <p class="text-octo-yellow text-sm sm:text-base md:text-lg font-bold">
                       Nossa equipe trabalhando em soluções que transformam negócios
                     </p>
                   </div>
@@ -296,7 +306,7 @@
                     >
                       <i class="fas fa-sitemap text-base sm:text-lg md:text-xl text-octo-yellow"></i>
                     </div>
-                    <h3 class="text-sm sm:text-base md:text-lg font-space xl:text-2xl mt-1 text-white group-hover:text-octo-yellow transition-colors">
+                    <h3 class="text-sm sm:text-base md:text-lg font-bold xl:text-2xl mt-1 text-white group-hover:text-octo-yellow transition-colors">
                       Metodologias Comprovadas
                     </h3>
                   </div>
@@ -316,7 +326,7 @@
                     >
                       <i class="fas fa-users text-base sm:text-lg md:text-xl text-octo-yellow"></i>
                     </div>
-                    <h3 class="text-sm sm:text-base md:text-lg font-space xl:text-2xl mt-1 text-white group-hover:text-octo-yellow transition-colors">
+                    <h3 class="text-sm sm:text-base md:text-lg font-bold xl:text-2xl mt-1 text-white group-hover:text-octo-yellow transition-colors">
                       Equipe Especializada
                     </h3>
                   </div>
@@ -336,7 +346,7 @@
                     >
                       <i class="fas fa-flask text-base sm:text-lg md:text-xl text-octo-yellow"></i>
                     </div>
-                    <h3 class="text-sm sm:text-base md:text-lg font-space xl:text-2xl mt-1 text-white group-hover:text-octo-yellow transition-colors">
+                    <h3 class="text-sm sm:text-base md:text-lg font-bold xl:text-2xl mt-1 text-white group-hover:text-octo-yellow transition-colors">
                       Estratégias de Impacto
                     </h3>
                   </div>
@@ -366,7 +376,7 @@
                   <div
                     class="absolute bottom-0 left-0 right-0 p-6 text-center opacity-100 transform transition-all duration-500"
                   >
-                    <p class="text-octo-yellow text-base md:text-lg font-space xl:text-xl">
+                    <p class="text-octo-yellow text-base md:text-lg font-bold xl:text-xl">
                       Nossa equipe trabalhando em soluções que transformam negócios
                     </p>
                   </div>
@@ -393,7 +403,7 @@
                   >
                     <i class="fas fa-sitemap text-base sm:text-lg text-octo-yellow"></i>
                   </div>
-                  <h3 class="text-sm sm:text-base font-space mt-1 text-white group-hover:text-octo-yellow transition-colors">
+                  <h3 class="text-sm sm:text-base font-bold mt-1 text-white group-hover:text-octo-yellow transition-colors">
                     Metodologias Comprovadas
                   </h3>
                 </div>
@@ -413,7 +423,7 @@
                   >
                     <i class="fas fa-users text-base sm:text-lg text-octo-yellow"></i>
                   </div>
-                  <h3 class="text-sm sm:text-base font-space mt-1 text-white group-hover:text-octo-yellow transition-colors">
+                  <h3 class="text-sm sm:text-base font-bold mt-1 text-white group-hover:text-octo-yellow transition-colors">
                     Equipe Especializada
                   </h3>
                 </div>
@@ -433,7 +443,7 @@
                   >
                     <i class="fas fa-flask text-base sm:text-lg text-octo-yellow"></i>
                   </div>
-                  <h3 class="text-sm sm:text-base font-space mt-1 text-white group-hover:text-octo-yellow transition-colors">
+                  <h3 class="text-sm sm:text-base font-bold mt-1 text-white group-hover:text-octo-yellow transition-colors">
                     Estratégias de Impacto
                   </h3>
                 </div>
@@ -523,10 +533,7 @@
             
             <!-- CTA de parcerias -->
             <div class="mt-10 text-center">
-              <a href="#contato" class="inline-flex items-center px-6 py-3 bg-octo-green/90 hover:bg-octo-yellow text-white hover:text-octo-blue rounded-full transition-all duration-300 transform hover:-translate-y-1 group">
-                <span class="mr-2">Seja nosso parceiro</span>
-                <i class="fas fa-handshake group-hover:rotate-12 transition-transform duration-300"></i>
-              </a>
+              <!-- Remover botão "Seja nosso parceiro" -->
             </div>
           </div>
         </div>
@@ -540,12 +547,22 @@
               >Processo Simplificado</span
             >
             <h2 class="text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4">
-              Como funcionam nossos serviços?
+              4 PASSOS PARA O RESULTADO
             </h2>
             <div class="w-24 h-1 bg-octo-yellow mx-auto mb-6"></div>
-            <p class="max-w-2xl mx-auto xl:text-xl">
-              Alcance resultados de forma mais simples do que você imaginava
+            <p class="max-w-2xl mx-auto xl:text-xl mb-8">
+              Alcance resultados de forma mais simples do que você imagina
             </p>
+            
+            <!-- Ajustar o botão para novo estilo de hover -->
+            <div class="flex justify-center">
+              <a href="#contato" class="inline-flex items-center bg-octo-yellow text-octo-blue px-8 py-3 rounded-full text-lg font-medium transition-all transform hover:-translate-y-1 hover:scale-105 hover:bg-octo-green hover:text-white group shadow-md">
+                <span class="relative z-10">Comece Sua Jornada Hoje</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div class="relative">
@@ -564,7 +581,7 @@
                     1
                   </div>
                 </div>
-                <h3 class="text-xl font-space mb-4 text-center xl:text-2xl text-white">
+                <h3 class="text-xl mb-4 font-bold text-center xl:text-2xl text-white ">
                   Converse com um Especialista
                 </h3>
                 <p class="text-center text-white xl:text-lg">
@@ -584,7 +601,7 @@
                     2
                   </div>
                 </div>
-                <h3 class="text-xl font-space mb-4 text-center xl:text-2xl text-white">
+                <h3 class="text-xl font-bold mb-4 text-center xl:text-2xl text-white">
                   Diagnóstico Gratuito do Seu Cenário atual
                 </h3>
                 <p class="text-center text-white xl:text-lg">
@@ -603,7 +620,7 @@
                     3
                   </div>
                 </div>
-                <h3 class="text-xl font-space mb-4 text-center xl:text-2xl text-white">
+                <h3 class="text-xl font-bold mb-4 text-center xl:text-2xl text-white">
                   Implementação das Estratégias
                 </h3>
                 <p class="text-center text-white xl:text-lg">
@@ -623,7 +640,7 @@
                     4
                   </div>
                 </div>
-                <h3 class="text-xl font-space mb-4 text-center xl:text-2xl text-white">
+                <h3 class="text-xl font-bold mb-4 text-center xl:text-2xl text-white">
                   Resultados Visíveis em até 3 Meses
                 </h3>
                 <p class="text-center text-white xl:text-lg">
@@ -647,10 +664,20 @@
               Nossos Tentáculos
             </h2>
             <div class="w-24 h-1 bg-octo-yellow mx-auto mb-6"></div>
-            <p class="max-w-2xl mx-auto xl:text-xl">
+            <p class="max-w-2xl mx-auto xl:text-xl mb-8">
               Soluções integradas que se adaptam às necessidades do seu negócio, sempre conectadas
               ao objetivo central.
             </p>
+            
+            <!-- Novo CTA após o título da seção -->
+            <div class="flex justify-center">
+              <a href="#contato" class="inline-flex items-center bg-octo-yellow text-octo-blue px-8 py-3 rounded-full text-lg font-medium transition-all transform hover:-translate-y-1 hover:scale-105 hover:bg-octo-green hover:text-white group shadow-md">
+                <span class="relative z-10">Potencialize Seu Negócio</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -666,7 +693,7 @@
                 >
                   <i class="fas fa-code text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space mb-3 xl:text-3xl">Desenvolvimento Web</h3>
+                <h3 class="text-xl font-bold mb-3 xl:text-3xl">Desenvolvimento Web</h3>
                 <p class="mb-4 text-white xl:text-xl">
                   Sites, aplicações e plataformas com foco em experiência do usuário e performance.
                 </p>
@@ -699,7 +726,7 @@
                 >
                   <i class="fas fa-bullhorn text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space mb-3 xl:text-3xl">Marketing Digital</h3>
+                <h3 class="text-xl font-bold mb-3 xl:text-3xl">Marketing Digital</h3>
                 <p class="mb-4 text-white xl:text-xl">
                   Estratégias integradas para aumentar visibilidade, engajamento e conversões.
                 </p>
@@ -732,7 +759,7 @@
                 >
                   <i class="fas fa-paint-brush text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space mb-3 xl:text-3xl">CRM e funis de vendas</h3>
+                <h3 class="text-xl font-bold mb-3 xl:text-3xl">CRM e funis de vendas</h3>
                 <p class="mb-4 text-white xl:text-xl">
                   Sistemas de gestão de clientes e automação de processos de venda.
                 </p>
@@ -761,7 +788,7 @@
                 >
                   <i class="fas fa-chart-pie text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space mb-3 xl:text-3xl">Análise de Dados</h3>
+                <h3 class="text-xl font-bold mb-3 xl:text-3xl">Análise de Dados</h3>
                 <p class="mb-4 text-white xl:text-xl">
                   Transformando dados em insights para decisões estratégicas.
                 </p>
@@ -794,7 +821,7 @@
                 >
                   <i class="fas fa-pencil-alt text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space mb-3 xl:text-3xl">Conteúdo Estratégico</h3>
+                <h3 class="text-xl font-bold mb-3 xl:text-3xl">Conteúdo Estratégico</h3>
                 <p class="mb-4 text-white xl:text-xl">
                   Textos persuasivos e relevantes para diferentes canais e objetivos.
                 </p>
@@ -827,7 +854,7 @@
                 >
                   <i class="fas fa-headset text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space mb-3 xl:text-3xl">Consultoria Digital</h3>
+                <h3 class="text-xl font-bold mb-3 xl:text-3xl">Consultoria Digital</h3>
                 <p class="mb-4 text-white xl:text-xl">
                   Orientação especializada para transformação e crescimento digital.
                 </p>
@@ -874,7 +901,7 @@
               class="inline-block px-4 py-1 bg-octo-yellow/20 text-white rounded-full mb-4 text-sm uppercase tracking-wider font-bold"
               >Nossa História</span
             >
-            <h2 class="text-4xl md:text-5xl xl:text-7xl font-space mb-6 text-white">Quem Somos?</h2>
+            <h2 class="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 text-white">Quem Somos?</h2>
             <div class="w-24 h-1 bg-octo-yellow mx-auto mb-6"></div>
             <p class="max-w-3xl mx-auto xl:text-xl">
               A
@@ -898,7 +925,7 @@
                 >
                   <i class="fas fa-brain text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space xl:text-2xl text-white">Foco no Cliente</h3>
+                <h3 class="text-xl font-bold xl:text-2xl text-white">Foco no Cliente</h3>
               </div>
               <p class="text-sm xl:text-base text-octo-yellow/90">
                 Colocamos nossos clientes no centro de tudo. Cada estratégia é pensada para
@@ -914,7 +941,7 @@
                 >
                   <i class="fas fa-lightbulb text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space xl:text-2xl text-white">Clareza e Eficiência</h3>
+                <h3 class="text-xl font-bold xl:text-2xl text-white">Clareza e Eficiência</h3>
               </div>
               <p class="text-sm xl:text-base text-octo-yellow/90">
                 Somos organizados, objetivos e orientados por dados. Valorizamos processos bem
@@ -930,7 +957,7 @@
                 >
                   <i class="fas fa-rocket text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space xl:text-2xl text-white">
+                <h3 class="text-xl font-bold xl:text-2xl text-white">
                   Inovação com Propósito
                 </h3>
               </div>
@@ -948,7 +975,7 @@
                 >
                   <i class="fas fa-chart-line text-2xl text-octo-yellow"></i>
                 </div>
-                <h3 class="text-xl font-space xl:text-2xl text-white">
+                <h3 class="text-xl font-bold xl:text-2xl text-white">
                   Resultados Acima de Tudo
                 </h3>
               </div>
@@ -976,7 +1003,7 @@
             >
             <h2 class="text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4">Nossa Equipe</h2>
             <div class="w-24 h-1 bg-octo-yellow mx-auto mb-6"></div>
-            <p class="max-w-2xl mx-auto xl:text-xl">
+            <p class="max-w-2xl mx-auto xl:text-xl mb-8">
               Conheça os profissionais que fazem a octo.hub acontecer. Uma equipe multidisciplinar,
               apaixonada e comprometida com resultados.
             </p>
@@ -987,16 +1014,16 @@
               <div class="relative mb-8 overflow-hidden rounded-2xl">
                 <img
                   src="src/assets/images/victor.webp"
-                  src="src/assets/images/victor.webp"
                   alt="Victor Braga"
-                  class="w-full h-80 object-cover object-center rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-80 object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
+                  style="object-position: center 40%;"
                 />
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-octo-blue via-octo-blue/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"
                 ></div>
               </div>
               <div class="text-center px-4">
-                <h3 class="text-2xl font-space mb-2 xl:text-3xl">Victor Braga</h3>
+                <h3 class="text-2xl font-bold mb-2 xl:text-3xl">Victor Braga</h3>
                 <div class="w-12 h-1 bg-octo-yellow mx-auto mb-3"></div>
                 <p class="text-octo-yellow font-medium mb-3 xl:text-xl">
                   Especialista Digital com Foco em Métricas e Resultados
@@ -1005,21 +1032,13 @@
                   Responsável por transformar dados em decisões estratégicas, alinhando performance
                   com crescimento sustentável.
                 </p>
-                <div class="flex justify-center space-x-3">
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
+              
               </div>
             </div>
 
             <div class="group">
               <div class="relative mb-8 overflow-hidden rounded-2xl">
                 <img
-                  src="src/assets/images/julia.webp"
                   src="src/assets/images/julia.webp"
                   alt="Julia Vergamini"
                   class="w-full h-80 object-cover object-center rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
@@ -1029,7 +1048,7 @@
                 ></div>
               </div>
               <div class="text-center px-4">
-                <h3 class="text-2xl font-space mb-2 xl:text-3xl">Julia Vergamini</h3>
+                <h3 class="text-2xl font-bold mb-2 xl:text-3xl">Julia Vergamini</h3>
                 <div class="w-12 h-1 bg-octo-yellow mx-auto mb-3"></div>
                 <p class="text-octo-yellow font-medium mb-3 xl:text-xl">
                   Especialista em Vendas, CRM e Funis de Conversão
@@ -1038,14 +1057,7 @@
                   Experiência em estruturação de jornadas de compra, automações e estratégias de
                   relacionamento orientadas à conversão.
                 </p>
-                <div class="flex justify-center space-x-3">
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
+              
               </div>
             </div>
 
@@ -1053,16 +1065,16 @@
               <div class="relative mb-8 overflow-hidden rounded-2xl">
                 <img
                   src="src/assets/images/gustavo.jpg"
-                  src="src/assets/images/gustavo.jpg"
                   alt="Gustavo Scheffel"
-                  class="w-full h-80 object-cover object-center rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-80 object-cover rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
+                  style="object-position: center 40%;"
                 />
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-octo-blue via-octo-blue/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"
                 ></div>
               </div>
               <div class="text-center px-4">
-                <h3 class="text-2xl font-space mb-2 xl:text-3xl">Gustavo Scheffel</h3>
+                <h3 class="text-2xl font-bold mb-2 xl:text-3xl">Gustavo Scheffel</h3>
                 <div class="w-12 h-1 bg-octo-yellow mx-auto mb-3"></div>
                 <p class="text-octo-yellow font-medium mb-3 xl:text-xl">
                   Especialista em Estratégias e Escala
@@ -1071,21 +1083,13 @@
                   Profissional focado em performance e conversão, com experiência em campanhas
                   otimizadas para resultados escaláveis.
                 </p>
-                <div class="flex justify-center space-x-3">
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
+              
               </div>
             </div>
 
             <div class="group">
               <div class="relative mb-8 overflow-hidden rounded-2xl">
                 <img
-                  src="src/assets/images/evelyn.jpg"
                   src="src/assets/images/evelyn.jpg"
                   alt="Evelyn Santos"
                   class="w-full h-80 object-cover object-center rounded-2xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
@@ -1095,7 +1099,7 @@
                 ></div>
               </div>
               <div class="text-center px-4">
-                <h3 class="text-2xl font-space mb-2 xl:text-3xl">Evelyn Santos</h3>
+                <h3 class="text-2xl font-bold mb-2 xl:text-3xl">Evelyn Santos</h3>
                 <div class="w-12 h-1 bg-octo-yellow mx-auto mb-3"></div>
                 <p class="text-octo-yellow font-medium mb-3 xl:text-xl">
                   Especialista em Marketing para Mídias Digitais
@@ -1104,14 +1108,7 @@
                   Atua no posicionamento de marcas por meio de conteúdo estratégico e campanhas de
                   engajamento em redes sociais.
                 </p>
-                <div class="flex justify-center space-x-3">
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#" class="text-octo-yellow/60 hover:text-octo-yellow transition-colors">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -1152,16 +1149,13 @@
               personalizadas.
             </p>
             <a
-              href="#contato"
-              class="inline-block bg-white text-octo-blue px-10 py-4 rounded-full text-xl font-medium shadow-xl hover:shadow-octo-yellow/20 transition-all transform hover:-translate-y-1 xl:text-2xl group relative overflow-hidden"
+              href="https://wa.me/+61414977586"
+              class="inline-flex items-center bg-octo-yellow text-octo-blue px-10 py-4 rounded-full text-xl font-medium transition-all transform hover:-translate-y-1 hover:scale-105 hover:bg-octo-green hover:text-white xl:text-2xl group shadow-lg"
             >
-              <span class="relative z-10 group-hover:text-octo-blue">Solicitar Proposta</span>
-              <div
-                class="absolute inset-0 h-full w-0 bg-octo-yellow group-hover:w-full transition-all duration-300 group-hover:duration-500"
-              ></div>
-              <i
-                class="fas fa-arrow-right opacity-0 group-hover:opacity-100 transition-opacity ml-0 group-hover:ml-2 relative z-10"
-              ></i>
+              <span class="relative z-10">Solicitar Proposta</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
           </div>
         </div>
@@ -1185,13 +1179,11 @@
                   class="relative bg-octo-blue/80 backdrop-blur-sm p-8 rounded-xl border border-octo-yellow/20 shadow-2xl"
                 >
                   <h2 class="text-3xl md:text-4xl xl:text-5xl font-bebas uppercase mb-6">
-                    Fale com um Especialista Agora!
+                    Transforme seu Negócio Hoje
                   </h2>
                   <div class="w-16 h-1 bg-octo-yellow mb-6"></div>
                   <p class="mb-8 xl:text-xl text-octo-yellow/90">
-                    Pronto para transformar seu negócio e começar a atrair clientes qualificados?
-                    Converse com um dos nossos especialistas e descubra como a octo.hub pode
-                    impulsionar o crescimento da sua empresa com estratégias personalizadas.
+                    Pronto para conquistar novos clientes e aumentar suas vendas? Nossa equipe de especialistas está preparada para impulsionar seus resultados com estratégias personalizadas e eficientes.
                   </p>
 
                   <div class="space-y-6 mb-10">
@@ -1223,6 +1215,7 @@
                       </div>
                     </div>
                   </div>
+                  
                 </div>
               </div>
 
@@ -1232,7 +1225,7 @@
                 <div
                   class="absolute -right-3 -top-3 bg-octo-yellow text-octo-blue px-4 py-1 text-sm font-medium rounded-full"
                 >
-                  Formulário Seguro <i class="fas fa-shield-alt ml-1"></i>
+                  Agende sua Reunião <i class="fas fa-calendar-check ml-1"></i>
                 </div>
                 <form>
                   <div class="mb-6 relative group">
@@ -1247,56 +1240,11 @@
                         id="nome"
                         class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg"
                         required
+                        placeholder="Seu nome completo"
                       />
                       <div
                         class="absolute inset-0 border border-octo-yellow/0 rounded-lg group-focus-within:border-octo-yellow/30 group-focus-within:shadow-octo-yellow/10 pointer-events-none transition-all"
                       ></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-6 relative group">
-                    <label
-                      for="email"
-                      class="block mb-2 text-sm font-medium xl:text-base group-focus-within:text-octo-yellow transition-colors"
-                      >E-mail</label
-                    >
-                    <div class="relative">
-                      <input
-                        type="email"
-                        id="email"
-                        class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg"
-                        required
-                      />
-                      <div
-                        class="absolute inset-0 border border-octo-yellow/0 rounded-lg group-focus-within:border-octo-yellow/30 group-focus-within:shadow-octo-yellow/10 pointer-events-none transition-all"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-6 relative group">
-                    <label
-                      for="assunto"
-                      class="block mb-2 text-sm font-medium xl:text-base group-focus-within:text-octo-yellow transition-colors"
-                      >Assunto</label
-                    >
-                    <div class="relative">
-                      <select
-                        id="assunto"
-                        class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg appearance-none"
-                      >
-                        <option value="orcamento">Solicitar orçamento</option>
-                        <option value="duvida">Tirar dúvidas</option>
-                        <option value="parceria">Proposta de parceria</option>
-                        <option value="outro">Outro assunto</option>
-                      </select>
-                      <div
-                        class="absolute inset-0 border border-octo-yellow/0 rounded-lg group-focus-within:border-octo-yellow/30 group-focus-within:shadow-octo-yellow/10 pointer-events-none transition-all"
-                      ></div>
-                      <div
-                        class="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none"
-                      >
-                        <i class="fas fa-chevron-down text-octo-yellow/50"></i>
-                      </div>
                     </div>
                   </div>
 
@@ -1312,6 +1260,7 @@
                         rows="4"
                         class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg"
                         required
+                        placeholder="Conte-nos sobre seu negócio e como podemos ajudar"
                       ></textarea>
                       <div
                         class="absolute inset-0 border border-octo-yellow/0 rounded-lg group-focus-within:border-octo-yellow/30 group-focus-within:shadow-octo-yellow/10 pointer-events-none transition-all"
@@ -1321,17 +1270,17 @@
 
                   <button
                     type="submit"
-                    class="w-full bg-gradient-to-r from-octo-green to-octo-green/80 text-white px-6 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-octo-green/20 transition-all transform hover:-translate-y-1 xl:text-xl group relative overflow-hidden"
+                    class="w-full bg-octo-yellow text-octo-blue px-6 py-4 rounded-lg font-medium transition-all transform hover:-translate-y-1 hover:scale-105 hover:bg-octo-green hover:text-white xl:text-xl group"
                   >
-                    <span class="relative z-10">Enviar Mensagem</span>
-                    <div
-                      class="absolute inset-0 h-full w-0 bg-octo-yellow group-hover:w-full transition-all duration-300 group-hover:duration-500"
-                    ></div>
-                    <span
-                      class="absolute inset-0 h-full w-full flex items-center justify-center text-octo-green font-medium opacity-0 group-hover:opacity-100 transition-opacity"
-                      >Enviar Mensagem</span
-                    >
+                    <span class="relative z-10 inline-flex items-center">
+                      Agendar Reunião
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </span>
                   </button>
+                  
+                  <p class="text-center text-octo-yellow/70 text-sm mt-4">Resposta em até 24 horas úteis</p>
                 </form>
               </div>
             </div>
@@ -1456,8 +1405,8 @@
 
     <!-- Botão WhatsApp Fixo -->
     <a
-      href="https://wa.me/5511987654321"
-      class="text-3xl fixed bottom-5 right-5 bg-[#25D366] hover:bg-green-600 text-white rounded-full p-5 shadow-lg transition-all duration-300 z-50 flex items-center justify-center"
+      href="https://wa.me/+61414977586"
+      class="text-3xl fixed bottom-5 right-5 bg-[#25D366] hover:bg-octo-green hover:text-white text-white rounded-full p-5 shadow-lg transition-all duration-300 z-50 flex items-center justify-center hover:scale-110 transform"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
