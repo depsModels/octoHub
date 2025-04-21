@@ -113,5 +113,4 @@ O projeto utiliza **ESLint** e **Prettier** para garantir a qualidade e consist�
 - `.eslintrc.json` – Configuração do ESLint  
 - `.prettierrc` – Configuração do Prettier  
 - `.eslintignore` – Arquivos ignorados pelo ESLint  
-- `.prettierignore` – Arquivos ignorados pelo Prettier  
-```
+- `.prettierignore` – Arquivos ignorados pelo Prettier 
