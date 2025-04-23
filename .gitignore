@@ -20,7 +20,6 @@ logs
 
 # Arquivos do editor
 .idea/
-.vscode/
 *.swp
 *.swo
 *.swn
