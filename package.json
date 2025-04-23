@@ -27,7 +27,7 @@
     "desenvolvimento web",
     "design"
   ],
-  "contributors": [
+  "authors": [
     {
       "name": "Miguel Leonardo Strapazon Lewandowski",
       "email": "miguelstrapazonl@gmail.com",
@@ -41,7 +41,6 @@
       "role": "Developer"
     }
   ],
-  "author": "octo.hub",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
