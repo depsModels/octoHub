@@ -1594,6 +1594,9 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Importa o script principal que contém a função do carrossel -->
+    <script src="../../scripts/script.js"></script>
+    
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const menuToggle = document.getElementById('menu-toggle');
@@ -1632,6 +1635,18 @@
 
         // Update current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Inicializa o carrossel de logos de parceiros
+        initCarousel();
+        
+        // Inicializa as partículas
+        const particlesContainer = document.getElementById('particles-container');
+        if (particlesContainer) {
+          createParticles(particlesContainer, 20);
+        }
+        
+        // Inicializa as animações de scroll
+        initScrollAnimations();
       });
     </script>
   </body>
