@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Carrossel infinito para logos de parceiros - melhorado com navegação manual
   initCarousel();
-  
+
   // Inicializa as animações de aparecimento ao scroll
   initScrollAnimations();
 });
@@ -54,20 +54,20 @@ function createParticles(container, count) {
   for (let i = 0; i < count; i++) {
     const particle = document.createElement('div');
     particle.className = 'particle';
-    
+
     // Tamanho aleatório entre 2-6px
     const size = Math.random() * 4 + 2;
-    
+
     // Posição aleatória
     const posX = Math.random() * 100;
     const posY = Math.random() * 100;
-    
+
     // Duração da animação aleatória entre 20-40s
     const duration = Math.random() * 20 + 20;
-    
+
     // Atraso aleatório para iniciar a animação
     const delay = Math.random() * 5;
-    
+
     particle.style.cssText = `
       position: absolute;
       width: ${size}px;
@@ -79,10 +79,10 @@ function createParticles(container, count) {
       opacity: ${Math.random() * 0.5 + 0.1};
       animation: float ${duration}s ease-in-out ${delay}s infinite;
     `;
-    
+
     container.appendChild(particle);
   }
-  
+
   // Adiciona a animação de float ao stylesheet
   const style = document.createElement('style');
   style.innerHTML = `
@@ -99,7 +99,6 @@ function createParticles(container, count) {
 // Carrossel aprimorado
 function initCarousel() {
   const carousel = document.querySelector('.logos-carousel');
-  
   if (carousel) {
     const logos = carousel.querySelectorAll('.partner-logo');
     const logoWidth = logos[0].offsetWidth;
@@ -107,38 +106,38 @@ function initCarousel() {
     let scrollPosition = 0;
     let animationId;
     let isPaused = false;
-    
+
     // Clona os logos necessários para criar o efeito infinito
     logos.forEach(logo => {
       const clone = logo.cloneNode(true);
       carousel.appendChild(clone);
     });
-    
+
     // Duplica mais um conjunto para garantir que sempre tenha elementos suficientes
     logos.forEach(logo => {
       const clone = logo.cloneNode(true);
       carousel.appendChild(clone);
     });
-    
+
     // Função que faz o scroll do carrossel (mais lento)
     function scrollCarousel() {
       if (isPaused) return;
-      
+
       scrollPosition -= 0.5; // Reduzindo a velocidade do carrossel
-      
+
       // Quando o primeiro conjunto de logos está completamente fora da vista
       // Reinicia a posição para criar o efeito infinito
       if (scrollPosition <= -logoWidth * totalLogos) {
         scrollPosition = 0;
       }
-      
+
       carousel.style.transform = `translateX(${scrollPosition}px)`;
       animationId = requestAnimationFrame(scrollCarousel);
     }
-    
+
     // Inicia a animação
     scrollCarousel();
-    
+
     // Pausa a animação quando o cursor está sobre o carrossel
     const carouselContainer = document.querySelector('.logos-carousel-container');
     if (carouselContainer) {
@@ -146,13 +145,13 @@ function initCarousel() {
         isPaused = true;
         cancelAnimationFrame(animationId);
       });
-      
+
       carouselContainer.addEventListener('mouseleave', () => {
         isPaused = false;
         scrollCarousel();
       });
     }
-    
+
     // Ajusta quando a janela é redimensionada
     window.addEventListener('resize', () => {
       const newLogoWidth = logos[0].offsetWidth;
@@ -167,13 +166,13 @@ function initCarousel() {
 // Animações de scroll
 function initScrollAnimations() {
   const animatedElements = document.querySelectorAll('[data-aos]');
-  
+
   if (animatedElements.length > 0) {
     const checkIfInView = () => {
       animatedElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementVisible = 150;
-        
+
         if (elementTop < window.innerHeight - elementVisible) {
           element.classList.add('aos-animate');
         } else {
@@ -181,14 +180,14 @@ function initScrollAnimations() {
         }
       });
     };
-    
+
     // Verifica a posição inicial dos elementos
     checkIfInView();
-    
+
     // Atualiza ao rolar a página
     window.addEventListener('scroll', checkIfInView);
   }
-  
+
   // Adiciona estilos para a animação de fade-in nos elementos
   const style = document.createElement('style');
   style.innerHTML = `
