@@ -54,6 +54,17 @@ Os seguintes campos foram implementados em ambas as versões do formulário:
 6. Uma mensagem de sucesso é exibida ao usuário
 7. O usuário é redirecionado de volta à página de origem
 
+## Processo de Build
+
+Durante o build do site (`npm run build`), os seguintes passos são executados automaticamente:
+
+1. O arquivo `send_form.php` é copiado para a pasta `public/`
+2. O arquivo `.htaccess` é copiado para a pasta `public/`
+3. O script `fix-paths.js` atualiza a detecção de idioma no arquivo PHP para garantir compatibilidade com a estrutura de pastas de produção
+4. Os formulários nas páginas HTML em português e inglês são atualizados para apontar para o caminho correto do script
+
+Isso garante que o formulário funcione corretamente tanto no ambiente de desenvolvimento quanto no ambiente de produção.
+
 ## Manutenção e Atualização
 
 Para manutenção ou ajustes futuros:

@@ -24,6 +24,7 @@ Options -Indexes
 
 # Limitar acesso ao script de formulário apenas para requisições POST
 <Files "send_form.php">
+    # Permitir acesso para métodos POST
     <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteCond %{REQUEST_METHOD} !^POST$
