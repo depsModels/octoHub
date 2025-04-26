@@ -60,7 +60,8 @@
         <div class="absolute inset-0 bg-gradient-to-r from-octo-blue via-octo-blue/10 to-transparent z-10"></div>
 
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style="background-image: url('../../assets/images/dupla-otimizada.webp')" aria-label="octo.hub team working together">
+          style="background-image: url('../../assets/images/dupla-otimizada.webp')"
+          aria-label="octo.hub team working together">
         </div>
       </div>
 
@@ -235,7 +236,7 @@
                 </div>
                 <p class="text-xs sm:text-sm xl:text-lg text-octo-yellow/90 relative pl-11 sm:pl-14 md:pl-16">
                   Tailored marketing and sales strategies that have already helped dozens of
-              entrepreneurs attract customers and increase their profit margins.
+                  entrepreneurs attract customers and increase their profit margins.
                 </p>
               </div>
 
@@ -1082,14 +1083,27 @@
                 class="absolute -right-3 -top-3 bg-octo-yellow text-octo-blue px-4 py-1 text-sm font-medium rounded-full">
                 Schedule Your Meeting <i class="fas fa-calendar-check ml-1"></i>
               </div>
-              <form>
+              <form action="/send_form.php" method="post">
                 <div class="mb-6 relative group">
                   <label for="nome"
                     class="block mb-2 text-sm font-medium xl:text-base group-focus-within:text-octo-yellow transition-colors">Name</label>
                   <div class="relative">
-                    <input type="text" id="nome"
+                    <input type="text" id="nome" name="nome"
                       class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg"
                       required placeholder="Your full name" />
+                    <div
+                      class="absolute inset-0 border border-octo-yellow/0 rounded-lg group-focus-within:border-octo-yellow/30 group-focus-within:shadow-octo-yellow/10 pointer-events-none transition-all">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-6 relative group">
+                  <label for="email"
+                    class="block mb-2 text-sm font-medium xl:text-base group-focus-within:text-octo-yellow transition-colors">Email</label>
+                  <div class="relative">
+                    <input type="email" id="email" name="email"
+                      class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg"
+                      required placeholder="your@email.com" />
                     <div
                       class="absolute inset-0 border border-octo-yellow/0 rounded-lg group-focus-within:border-octo-yellow/30 group-focus-within:shadow-octo-yellow/10 pointer-events-none transition-all">
                     </div>
@@ -1100,7 +1114,7 @@
                   <label for="mensagem"
                     class="block mb-2 text-sm font-medium xl:text-base group-focus-within:text-octo-yellow transition-colors">Message</label>
                   <div class="relative">
-                    <textarea id="mensagem" rows="4"
+                    <textarea id="mensagem" name="mensagem" rows="4"
                       class="w-full px-5 py-3 bg-octo-blue/50 border border-octo-yellow/30 rounded-lg focus:outline-none focus:border-octo-yellow xl:text-lg"
                       required placeholder="Tell us about your business and how we can help"></textarea>
                     <div

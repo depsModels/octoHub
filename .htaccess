@@ -1,0 +1,49 @@
+# Configurações de segurança e codificação para formulário
+AddDefaultCharset UTF-8
+
+# Forçar HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Proteção básica contra ataques
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Política de Segurança de Conteúdo - ajuste conforme necessário
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'"
+</IfModule>
+
+# Desativar visualização de diretórios
+Options -Indexes
+
+# Limitar acesso direto a arquivos PHP específicos
+<Files "send_form.php">
+    Order Allow,Deny
+    Deny from all
+    # Permitir apenas requisições POST
+    <LimitExcept POST>
+        Deny from all
+    </LimitExcept>
+</Files>
+
+# Proteção contra exposição de informações
+ServerSignature Off
+
+# Configuração de PHP via .htaccess (se permitido pelo servidor)
+<IfModule mod_php7.c>
+    php_flag display_errors off
+    php_value default_charset UTF-8
+</IfModule>
+
+# Configurações específicas para formulários
+<IfModule mod_php.c>
+    php_value post_max_size 8M
+    php_value upload_max_filesize 2M
+    php_value max_input_vars 1000
+</IfModule> 
