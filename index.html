@@ -6,16 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="octo.hub - Soluções estratégicas e conectadas para seu negócio. Inteligência, criatividade e performance num só lugar." />
-  <meta name="keywords" content="agência digital, marketing, estratégia, desenvolvimento web, design" />
+  <meta name="keywords"
+    content="agência digital, marketing, estratégia, desenvolvimento web, design, captação de clientes, performance, consultoria digital" />
   <meta name="author" content="octo.hub" />
-  <title>octo.hub | Soluções Estratégicas Conectadas</title>
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://octohub.site/" />
+  <meta property="og:title" content="octo.hub | Soluções Estratégicas Conectadas" />
+  <meta property="og:description"
+    content="Soluções estratégicas e conectadas para seu negócio. Inteligência, criatividade e performance num só lugar." />
+  <meta property="og:image" content="src/assets/logos/logoIcon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="octo.hub | Soluções Estratégicas Conectadas" />
+  <meta name="twitter:description"
+    content="Soluções estratégicas e conectadas para seu negócio. Inteligência, criatividade e performance num só lugar." />
+  <meta name="twitter:image" content="src/assets/logos/logoIcon.png" />
+  <title>octo.hub | Agência Digital, Captação de Clientes, Performance e Consultoria</title>
 
   <!-- Language Alternatives for SEO -->
-  <link rel="alternate" hreflang="pt-BR" href="/" />
-  <link rel="alternate" hreflang="en" href="/en/" />
-  <link rel="canonical" href="/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://octohub.site/" />
+  <link rel="alternate" hreflang="en" href="https://octohub.site/en/" />
+  <link rel="canonical" href="https://octohub.site/" />
 
   <link rel="icon" href="src/assets/logos/logoIcon.png" />
+  <link rel="preload" as="image" href="src/assets/logos/logo.png" />
+  <link rel="preload" as="image" href="src/assets/images/dupla-otimizada.webp" />
+  <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" crossorigin />
 
   <!-- Tailwind CSS -->
   <link href="./src/styles/output.css" rel="stylesheet" />
@@ -28,7 +44,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="src/styles/styles.css" />
   <link rel="stylesheet" href="src/styles/styles.css" />
 </head>
 
@@ -50,7 +65,11 @@
     <!-- Imagem de fundo para mobile apenas -->
     <div class="absolute inset-0 md:hidden z-0">
       <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('src/assets/images/dupla-otimizada.webp')"></div>
+        style="background-image: url('src/assets/images/dupla-otimizada.webp')"
+        aria-label="Equipe octo.hub trabalhando em conjunto">
+        <img src="src/assets/images/dupla-otimizada.webp" alt="Equipe octo.hub trabalhando em conjunto"
+          style="display:none" loading="lazy" />
+      </div>
       <div class="absolute inset-0 bg-gradient-to-b from-octo-blue/80 to-octo-blue/90"></div>
     </div>
 
@@ -73,7 +92,7 @@
       <div class="container mx-auto px-4 py-6">
         <div class="flex justify-between items-center">
           <a href="#" class="flex items-center">
-            <img src="src/assets/logos/logo.png" alt="octo.hub Logo" class="h-20 mr-2" />
+            <img src="src/assets/logos/logo.png" alt="octo.hub Logo" class="h-20 mr-2" loading="lazy" />
           </a>
 
           <nav class="hidden md:flex items-center space-x-8">
@@ -160,10 +179,7 @@
         <div class="absolute w-full h-full bg-gradient-to-b from-transparent via-octo-yellow/5 to-transparent"></div>
       </div>
 
-      <!-- Partículas animadas para efeito moderno -->
-      <div class="absolute inset-0 overflow-hidden opacity-10 pointer-events-none" id="particles-container">
-        <!-- Partículas adicionadas via JavaScript -->
-      </div>
+
 
       <div class="container mx-auto relative z-10">
         <div class="text-center mb-10 sm:mb-12 md:mb-16 relative">
@@ -1152,7 +1168,7 @@
       <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
         <div class="mb-8 md:mb-0 text-center md:text-left">
           <a href="#" class="inline-block">
-            <img src="src/assets/logos/logo.png" alt="octo.hub Logo" class="h-20 mb-3 mx-auto md:mx-0" />
+            <img src="src/assets/logos/logo.png" alt="octo.hub Logo" class="h-20 mb-3 mx-auto md:mx-0" loading="lazy" />
           </a>
           <p class="text-xs text-octo-yellow/70 xl:text-lg">
             Conectando inteligência e estratégia para seu negócio.

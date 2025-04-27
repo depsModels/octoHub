@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializa todas as funcionalidades
   initMobileMenu();
   updateCopyrightYear();
-  initParticles();
   initCarousel();
   initScrollAnimations();
 });
@@ -58,63 +56,6 @@ function updateCopyrightYear() {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
-}
-
-// Sistema de partículas
-function initParticles() {
-  const particlesContainer = document.getElementById('particles-container');
-  if (!particlesContainer) return;
-
-  createParticles(particlesContainer, 20);
-}
-
-function createParticles(container, count) {
-  // Adiciona a animação de float ao stylesheet uma única vez
-  if (!document.getElementById('particle-animation-style')) {
-    const style = document.createElement('style');
-    style.id = 'particle-animation-style';
-    style.innerHTML = `
-      @keyframes float {
-        0%, 100% { transform: translate(0, 0) rotate(0deg); }
-        25% { transform: translate(10px, 15px) rotate(5deg); }
-        50% { transform: translate(-5px, 10px) rotate(-5deg); }
-        75% { transform: translate(-10px, -5px) rotate(3deg); }
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  // Cria os elementos de partícula
-  const fragment = document.createDocumentFragment();
-
-  for (let i = 0; i < count; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-
-    // Propriedades aleatórias
-    const size = Math.random() * 4 + 2;
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    const duration = Math.random() * 20 + 20;
-    const delay = Math.random() * 5;
-    const opacity = Math.random() * 0.5 + 0.1;
-
-    particle.style.cssText = `
-      position: absolute;
-      width: ${size}px;
-      height: ${size}px;
-      background-color: rgba(249, 249, 224, 0.3);
-      border-radius: 50%;
-      top: ${posY}%;
-      left: ${posX}%;
-      opacity: ${opacity};
-      animation: float ${duration}s ease-in-out ${delay}s infinite;
-    `;
-
-    fragment.appendChild(particle);
-  }
-
-  container.appendChild(fragment);
 }
 
 // Carrossel aprimorado
