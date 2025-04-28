@@ -2,7 +2,7 @@ import prettier from 'eslint-plugin-prettier';
 
 export default [
   {
-    ignores: ['node_modules/**', 'dist/**', 'build/**', 'src/styles/output.css', '*.min.js']
+    ignores: ['node_modules/**', 'dist/**', 'build/**', 'src/styles/output.css']
   },
   {
     files: ['**/*.js'],
