@@ -1,138 +1,78 @@
-# OctoHub - Soluções Estratégicas de Marketing Digital
+# OctoHub
 
-![OctoHub Logo](src/assets/logo/logo.png)
+<img src="./src/assets/logos/logo.png" alt="OctoHub Logo" width="300"/>
 
-## 📋 Descrição
+## Sobre o Projeto
 
-OctoHub é uma landing page moderna para uma agência de marketing digital especializada em captação de clientes e estratégias de crescimento para empresas. A plataforma foi construída com foco em performance, SEO e experiência do usuário, utilizando uma abordagem mobile-first.
+OctoHub é uma landing page moderna para uma agência de marketing digital, apresentando seus serviços, portfólio e informações de contato de forma elegante e responsiva.
 
-### 🚀 Características Principais
+## Recursos
 
-- Design responsivo e mobile-first
-- Animações e interações suaves otimizadas
-- Carregamento otimizado de imagens e recursos 
-- SEO amigável com HTML semântico
-- Performance excelente (Lighthouse 90+)
+- Design responsivo
+- Experiência de usuário intuitiva
+- Validação de formulário
+- Animações suaves
+- Otimização SEO
+- Tempos de carregamento rápidos
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- HTML5 semântico
-- [Tailwind CSS](https://tailwindcss.com/) para estilização
-- JavaScript Vanilla para funcionalidades interativas
-- Otimização de imagens com carregamento lazy
-- PostCSS para processamento CSS
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- PHP
+- Tailwind CSS
+- PostCSS
+- npm
 
-## 🗂️ Estrutura do Projeto
+## Estrutura do Projeto
 
+- **`src/`**: Diretório de desenvolvimento.
+  - `styles/`: Arquivos de estilo Sass e CSS.
+  - `scripts/`: JavaScript do cliente.
+  - `assets/`: Recursos como imagens e fontes.
+    - `logos/`: Contém `logo.png` (logo completo) e `logoIcon.png` (ícone).
+    - `images/`: Imagens utilizadas no site.
+    - `logos-companies/`: Logos de empresas parceiras.
+  - `pages/`: Arquivos de template para diferentes páginas.
+
+- **`public/`**: Diretório de produção com arquivos otimizados prontos para implantação.
+
+## Instalação
+
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+
+# Navegue até o diretório do projeto
+cd <nome-da-pasta>
+
+# Instale as dependências
+npm install
 ```
-octoHub/
-├── src/
-│   ├── assets/
-│   │   ├── images/     # Imagens do site
-│   │   └── logo/       # Logos e identidade visual
-│   ├── scripts/
-│   │   └── script.js   # JavaScript principal
-│   ├── styles/
-│   │   ├── input.css   # Arquivo fonte para o Tailwind
-│   │   ├── output.css  # CSS compilado pelo Tailwind
-│   │   └── styles.css  # Estilos adicionais
-│   └── pages/          # Páginas secundárias (ex: EN)
-├── index.html          # Página principal
-├── package.json        # Dependências e scripts
-├── tailwind.config.js  # Configuração do Tailwind
-└── README.md           # Este arquivo
+
+## Comandos Disponíveis
+
+```bash
+# Inicia o servidor de desenvolvimento
+npm run dev
+
+# Compila para produção
+npm run build
+
+# Executa testes
+npm run test
 ```
 
-## 📦 Pré-requisitos
+## Fluxo de Desenvolvimento
 
-- [Node.js](https://nodejs.org/) (v14.0.0 ou superior)
-- [npm](https://www.npmjs.com/) (v6.0.0 ou superior)
-- [XAMPP](https://www.apachefriends.org/) ou servidor web similar (opcional, para desenvolvimento local)
+1. Trabalhe nos arquivos dentro do diretório `src/`.
+2. Execute `npm run dev` para visualizar suas alterações em tempo real.
+3. Quando estiver pronto para produção, execute `npm run build` para gerar arquivos otimizados no diretório `public/`.
 
-## ⚙️ Instalação e Configuração
+## Implantação
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/octoHub.git
-   cd octoHub
-   ```
+Para implantar o site:
 
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-
-3. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-
-4. Para construir o projeto para produção:
-   ```bash
-   npm run build
-   ```
-
-## 📝 Comandos Disponíveis
-
-| Comando           | Descrição                                                                          |
-|-------------------|------------------------------------------------------------------------------------|
-| `npm run dev`     | Inicia o servidor de desenvolvimento com hot-reload (observa alterações em CSS)    |
-| `npm run build`   | Compila o CSS com Tailwind para produção (minificado)                              |
-| `npm run lint`    | Executa o ESLint para verificar problemas no código                                |
-| `npm run lint:fix` | Corrige automaticamente problemas de linting quando possível                       |
-| `npm run format`  | Formata o código com Prettier                                                      |
-| `npm run format:check` | Verifica se o código está formatado corretamente                               |
-
-## 🔧 Desenvolvimento
-
-### Workflow de Desenvolvimento
-
-1. Execute `npm run dev` para iniciar o ambiente de desenvolvimento
-2. Edite arquivos HTML, CSS ou JavaScript conforme necessário
-3. As alterações no HTML são atualizadas automaticamente
-4. Para mudanças nas classes Tailwind, elas serão compiladas automaticamente pelo watcher
-5. Para alterações em JavaScript, você pode precisar atualizar o navegador
-
-### Estrutura Tailwind CSS
-
-O projeto utiliza Tailwind CSS para estilização. Os principais arquivos são:
-
-- `src/styles/input.css`: Contém as diretivas do Tailwind e pode incluir estilos personalizados
-- `src/styles/output.css`: CSS compilado pelo Tailwind (não edite diretamente)
-- `tailwind.config.js`: Configuração do Tailwind, incluindo temas, plugins e extensões
-
-### Adicionando Novas Páginas
-
-1. Crie um novo arquivo HTML na pasta raiz ou na pasta `/src/pages/`
-2. Utilize a mesma estrutura e componentes da página principal para manter a consistência
-3. Inclua os mesmos arquivos CSS e JavaScript
-
-## 📤 Deploy
-
-Para publicar o site em produção:
-
-1. Execute `npm run build` para gerar os arquivos otimizados
-2. Faça upload dos arquivos para o servidor web:
-   - Todos os arquivos HTML
-   - A pasta `src` completa
-   - Qualquer outro arquivo necessário (robots.txt, sitemap.xml, etc.)
-
-### Recomendações para Hospedagem
-
-- Habilite compressão GZIP/Brotli no servidor
-- Configure cache de navegador para recursos estáticos
-- Utilize CDN para entrega de conteúdo (opcional)
-
-## 📚 Recursos e Documentação
-
-- [Documentação do Tailwind CSS](https://tailwindcss.com/docs)
-- [Guia de HTML Semântico](https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics)
-- [Otimização de Performance Web](https://web.dev/performance-scoring/)
-
-## 📜 Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE)
-
----
-
-Desenvolvido com 💙 pelo time Deps Models =
+1. Execute `npm run build` para gerar os arquivos de produção.
+2. Faça upload dos arquivos do diretório `public/` para seu servidor web.
