@@ -782,6 +782,10 @@ video {
   margin-top: 2rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -1165,6 +1169,10 @@ video {
 
 .bg-octo-blue\/30 {
   background-color: rgb(21 45 53 / 0.3);
+}
+
+.bg-octo-green\/20 {
+  background-color: rgb(3 73 61 / 0.2);
 }
 
 .bg-\[radial-gradient\(circle\2c _\#F9F9E0_1px\2c _transparent_1px\)\] {
