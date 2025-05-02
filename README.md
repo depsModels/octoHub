@@ -10,7 +10,7 @@ OctoHub é uma landing page moderna para uma agência de marketing digital espec
 
 - Design responsivo e mobile-first
 - Animações e interações suaves otimizadas
-- Carregamento otimizado de imagens e recursos 
+- Carregamento otimizado de imagens e recursos
 - SEO amigável com HTML semântico
 - Performance excelente (Lighthouse 90+)
 
@@ -52,17 +52,20 @@ octoHub/
 ## ⚙️ Instalação e Configuração
 
 1. Clone o repositório:
+
    ```bash
    git clone https://github.com/seu-usuario/octoHub.git
    cd octoHub
    ```
 
 2. Instale as dependências:
+
    ```bash
    npm install
    ```
 
 3. Inicie o servidor de desenvolvimento:
+
    ```bash
    npm run dev
    ```
@@ -74,14 +77,14 @@ octoHub/
 
 ## 📝 Comandos Disponíveis
 
-| Comando           | Descrição                                                                          |
-|-------------------|------------------------------------------------------------------------------------|
-| `npm run dev`     | Inicia o servidor de desenvolvimento com hot-reload (observa alterações em CSS)    |
-| `npm run build`   | Compila o CSS com Tailwind para produção (minificado)                              |
-| `npm run lint`    | Executa o ESLint para verificar problemas no código                                |
-| `npm run lint:fix` | Corrige automaticamente problemas de linting quando possível                       |
-| `npm run format`  | Formata o código com Prettier                                                      |
-| `npm run format:check` | Verifica se o código está formatado corretamente                               |
+| Comando                | Descrição                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `npm run dev`          | Inicia o servidor de desenvolvimento com hot-reload (observa alterações em CSS) |
+| `npm run build`        | Compila o CSS com Tailwind para produção (minificado)                           |
+| `npm run lint`         | Executa o ESLint para verificar problemas no código                             |
+| `npm run lint:fix`     | Corrige automaticamente problemas de linting quando possível                    |
+| `npm run format`       | Formata o código com Prettier                                                   |
+| `npm run format:check` | Verifica se o código está formatado corretamente                                |
 
 ## 🔧 Desenvolvimento
 
@@ -114,7 +117,7 @@ Para publicar o site em produção:
 1. Execute `npm run build` para gerar os arquivos otimizados
 2. Faça upload dos arquivos para o servidor web:
    - Todos os arquivos HTML
-   - A pasta `src` completa
+   - A pasta `public` completa
    - Qualquer outro arquivo necessário (robots.txt, sitemap.xml, etc.)
 
 ### Recomendações para Hospedagem
