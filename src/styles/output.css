@@ -866,6 +866,10 @@ video {
   min-height: 600px;
 }
 
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1157,6 +1161,10 @@ video {
 
 .bg-white\/5 {
   background-color: rgb(255 255 255 / 0.05);
+}
+
+.bg-octo-blue\/30 {
+  background-color: rgb(21 45 53 / 0.3);
 }
 
 .bg-\[radial-gradient\(circle\2c _\#F9F9E0_1px\2c _transparent_1px\)\] {
@@ -2018,6 +2026,10 @@ video {
 
   .md\:min-h-\[700px\] {
     min-height: 700px;
+  }
+
+  .md\:min-h-\[500px\] {
+    min-height: 500px;
   }
 
   .md\:w-12 {
