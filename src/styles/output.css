@@ -782,6 +782,14 @@ video {
   margin-top: 2rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1134,10 +1142,6 @@ video {
   background-color: rgb(3 73 61 / 0.1);
 }
 
-.bg-octo-green\/20 {
-  background-color: rgb(3 73 61 / 0.2);
-}
-
 .bg-octo-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(249 249 224 / var(--tw-bg-opacity, 1));
@@ -1333,18 +1337,6 @@ video {
 
 .bg-\[length\:24px_24px\] {
   background-size: 24px 24px;
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .object-cover {
@@ -1724,10 +1716,6 @@ video {
 
 .duration-700 {
   transition-duration: 700ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:-translate-y-1:hover {
