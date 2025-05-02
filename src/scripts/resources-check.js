@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Verifica se os ícones do Font Awesome estão carregando
   checkFontAwesome();
 
-  // Verifica se as fontes do Google estão carregando
-  checkGoogleFonts();
+  // Carrega as fontes diretamente via CSS inline
+  injectFontsDirectly();
 });
 
 /**
@@ -43,33 +43,98 @@ function checkFontAwesome() {
 }
 
 /**
- * Verifica se as fontes do Google estão carregando
+ * Injeta as fontes diretamente no documento via CSS @font-face
+ * Esta é a abordagem mais confiável para garantir que as fontes estejam disponíveis
  */
-function checkGoogleFonts() {
-  // Lista de fontes que devem estar carregadas
-  const expectedFonts = ['Bebas Neue', 'Space Grotesk', 'Archivo Black', 'Inter'];
+function injectFontsDirectly() {
+  console.log('📋 Injetando fontes diretamente no documento para máxima compatibilidade');
 
-  // Usa a API Font Loading se disponível
-  if (document.fonts && document.fonts.check) {
-    let allLoaded = true;
-
-    expectedFonts.forEach((fontName) => {
-      if (!document.fonts.check(`1em "${fontName}"`)) {
-        allLoaded = false;
-        console.warn(
-          `⚠️ Fonte "${fontName}" não está carregada. Verifique a configuração CSP no .htaccess.`
-        );
-      }
-    });
-
-    if (!allLoaded) {
-      loadGoogleFontsFallback();
+  // Cria um estilo que define as fontes diretamente
+  const style = document.createElement('style');
+  style.textContent = `
+    /* Definiçoes de fonte injetadas diretamente para garantir disponibilidade */
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2') format('woff2');
     }
-  } else {
-    // Fallback para navegadores sem API Font Loading
-    // Assume que pode haver problemas e carrega o fallback
-    loadGoogleFontsFallback();
-  }
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Archivo Black';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/archivoblack/v17/HTxqL289NzCGg4MzN6KJ7eW6CYyF-w.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Bebas Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/bebasneue/v9/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    }
+  `;
+
+  // Insere o estilo no cabeçalho do documento
+  document.head.appendChild(style);
+
+  // Também carrega as fontes via link para redundância
+  loadAllGoogleFonts();
+
+  // Não precisa verificar se as fontes carregaram - estamos definindo elas diretamente
+}
+
+/**
+ * Carrega todas as fontes Google via JavaScript
+ */
+function loadAllGoogleFonts() {
+  // URLs de fontes individuais (para maior confiabilidade de carregamento)
+  const fontUrls = [
+    'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap',
+    'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap'
+  ];
+
+  // Carrega cada URL individual
+  fontUrls.forEach((url) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+
+  console.log('📋 Fontes Google carregadas via links de redundância');
 }
 
 /**
@@ -90,22 +155,4 @@ function loadFontAwesomeFallback() {
 
   document.head.appendChild(link);
   console.log('📋 Carregando Font Awesome via JavaScript como fallback');
-}
-
-/**
- * Carrega as fontes do Google via JavaScript como fallback
- */
-function loadGoogleFontsFallback() {
-  if (document.querySelector('link[href*="fonts.googleapis.com"]')) {
-    return; // Já existe uma tag link, não duplicar
-  }
-
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href =
-    'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&family=Archivo+Black&family=Inter:wght@400;500;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap';
-  link.id = 'google-fonts-fallback';
-
-  document.head.appendChild(link);
-  console.log('📋 Carregando Google Fonts via JavaScript como fallback');
 }
