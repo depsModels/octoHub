@@ -30,9 +30,6 @@ function checkFontAwesome() {
     const width = parseFloat(style.width);
 
     if (width === 0) {
-      console.warn(
-        '⚠️ Font Awesome não está carregando corretamente. Verifique a configuração CSP no .htaccess.'
-      );
       // Tenta carregar o Font Awesome via JavaScript como fallback
       loadFontAwesomeFallback();
     }
@@ -56,9 +53,6 @@ function checkGoogleFonts() {
     expectedFonts.forEach((fontName) => {
       if (!document.fonts.check(`1em "${fontName}"`)) {
         allLoaded = false;
-        console.warn(
-          `⚠️ Fonte "${fontName}" não está carregada. Verifique a configuração CSP no .htaccess.`
-        );
       }
     });
 
@@ -89,9 +83,7 @@ function loadFontAwesomeFallback() {
   link.id = 'fontawesome-fallback';
 
   document.head.appendChild(link);
-  console.log('📋 Carregando Font Awesome via JavaScript como fallback');
 }
-
 /**
  * Carrega as fontes do Google via JavaScript como fallback
  */
@@ -107,5 +99,4 @@ function loadGoogleFontsFallback() {
   link.id = 'google-fonts-fallback';
 
   document.head.appendChild(link);
-  console.log('📋 Carregando Google Fonts via JavaScript como fallback');
 }
