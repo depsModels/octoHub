@@ -1,6 +1,8 @@
 # OctoHub - Soluções Estratégicas de Marketing Digital
 
-![OctoHub Logo](src/assets/logo/logo.png)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.en.md)
+
+![OctoHub Logo](src/assets/logos/logo.png)
 
 ## 📋 Descrição
 
@@ -131,10 +133,6 @@ Para publicar o site em produção:
 - [Documentação do Tailwind CSS](https://tailwindcss.com/docs)
 - [Guia de HTML Semântico](https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics)
 - [Otimização de Performance Web](https://web.dev/performance-scoring/)
-
-## 📜 Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE)
 
 ---
 
