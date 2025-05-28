@@ -49,7 +49,6 @@ octoHub/
 
 - [Node.js](https://nodejs.org/) (v14.0.0 ou superior)
 - [npm](https://www.npmjs.com/) (v6.0.0 ou superior)
-- [XAMPP](https://www.apachefriends.org/) ou servidor web similar (opcional, para desenvolvimento local)
 
 ## ⚙️ Instalação e Configuração
 
