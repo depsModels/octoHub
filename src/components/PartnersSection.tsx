@@ -1,6 +1,9 @@
+"use client";
 import PartnersCarousel from './PartnersCarousel'
+import { useTranslation } from '../lib/i18n/useTranslation'
 
 export default function PartnersSection() {
+  const { t } = useTranslation();
   return (
     <section id="parceiros" className="py-16 px-4 bg-octo-blue/90 relative">
       <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -20,7 +23,7 @@ export default function PartnersSection() {
       </div>
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="flex justify-center items-center ml-1 text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4">Quem confia na <img src="/assets/logos/logo.png" alt="octo.hub Logo" className="mb-6" width={250} height={100} /></h2>
+          <h2 className="flex justify-center items-center ml-1 text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4">{t('partners.title')} <img src="/assets/logos/logo.png" alt="octo.hub Logo" className="mb-6" width={250} height={100} /></h2>
         </div>
         <PartnersCarousel />
       </div>

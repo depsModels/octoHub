@@ -1,9 +1,12 @@
+"use client";
+import { useTranslation } from '../lib/i18n/useTranslation'
 export default function Team() {
+  const { t } = useTranslation();
   const members = [
-    {src:'victor.webp', name:'Victor Braga', role:'Especialista Digital com Foco em Métricas e Resultados', desc:'Responsável por transformar dados em decisões estratégicas, alinhando performance com crescimento sustentável.'},
-    {src:'julia.webp', name:'Julia Vergamini', role:'Especialista em Vendas, CRM e Funis de Conversão', desc:'Estruturação de jornadas de compra e estratégias de relacionamento orientadas à conversão.'},
-    {src:'gustavo.jpg', name:'Gustavo Scheffel', role:'Especialista em Estratégias e Escala', desc:'Focado em performance e conversão, extraindo o máximo das ferramentas de tráfego pago.'},
-    {src:'evelyn.jpg', name:'Evelyn Santos', role:'Especialista em Marketing para Redes Sociais', desc:'Atua no posicionamento de marcas por meio de conteúdos estratégicos e campanhas de engajamento em redes sociais.'}
+    {src:'victor.webp', name:'Victor Braga', role:t('team.members.victor.role'), desc:t('team.members.victor.desc')},
+    {src:'julia.webp', name:'Julia Vergamini', role:t('team.members.julia.role'), desc:t('team.members.julia.desc')},
+    {src:'gustavo.jpg', name:'Gustavo Scheffel', role:t('team.members.gustavo.role'), desc:t('team.members.gustavo.desc')},
+    {src:'evelyn.jpg', name:'Evelyn Santos', role:t('team.members.evelyn.role'), desc:t('team.members.evelyn.desc')}
   ]
   return (
     <section id="equipe" className="py-20 px-4 relative">
@@ -12,9 +15,9 @@ export default function Team() {
       </div>
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4">Nossa Equipe</h2>
+          <h2 className="text-3xl md:text-4xl xl:text-6xl font-bebas uppercase mb-4">{t('team.title')}</h2>
           <div className="w-24 h-1 bg-octo-yellow mx-auto mb-6" />
-          <p className="max-w-2xl mx-auto xl:text-xl mb-8">Conheça os profissionais que fazem a octo.hub acontecer. Uma equipe multidisciplinar, apaixonada e comprometida com resultados.</p>
+          <p className="max-w-2xl mx-auto xl:text-xl mb-8">{t('team.desc')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {members.map((m) => (

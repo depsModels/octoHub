@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Bebas_Neue, Space_Grotesk, Archivo_Black, Inter } from 'next/font/google';
 import './globals.css';
 import '../styles/styles.css';
+import { LanguageProvider } from '@/hooks/useLanguage';
 
 const bebas = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--font-bebas' });
 const space = Space_Grotesk({ subsets: ['latin'], weight: ['400','700'], variable: '--font-space' });
@@ -13,7 +14,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <body className={`${bebas.variable} ${space.variable} ${archivo.variable} ${inter.variable} bg-gradient-to-br from-octo-green/95 via-octo-blue/100 to-octo-green/90 text-octo-yellow font-inter overflow-x-hidden`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
     canonical: '/',
     languages: {
       'pt-BR': '/',
-      en: '/en'
+      'en-US': '/'
     }
   },
   openGraph: {

@@ -1,4 +1,7 @@
+"use client";
+import { useTranslation } from '../lib/i18n/useTranslation'
 export default function About() {
+  const { t } = useTranslation();
   return (
     <section id="quem-somos" className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
@@ -13,17 +16,17 @@ export default function About() {
       </div>
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1 bg-octo-yellow/20 text-white rounded-full mb-4 text-sm uppercase tracking-wider font-bold">Nossa História</span>
-          <h2 className="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 text-white">Quem somos?</h2>
+          <span className="inline-block px-4 py-1 bg-octo-yellow/20 text-white rounded-full mb-4 text-sm uppercase tracking-wider font-bold">{t('about.badge')}</span>
+          <h2 className="text-4xl md:text-5xl xl:text-7xl font-bold mb-6 text-white">{t('about.title')}</h2>
           <div className="w-24 h-1 bg-octo-yellow mx-auto mb-6" />
-          <p className="max-w-3xl mx-auto xl:text-xl">A <strong className="font-medium text-octo-yellow">octo.hub</strong> surgiu com o objetivo de centralizar, em um único lugar, todas as frentes essenciais para o sucesso de um negócio no ambiente digital. Unimos estratégias de marketing, tráfego pago, social media, automações, funis de vendas e consultoria comercial para oferecer uma solução completa.<br />Atuamos como uma extensão do seu time, conectando todas as áreas que impactam diretamente na atração de clientes e no aumento das vendas.</p>
+          <p className="max-w-3xl mx-auto xl:text-xl">{t('about.text')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
-            {icon:'fa-brain', title:'Foco no Cliente', text:'Colocamos nossos clientes no centro de tudo. Cada estratégia é pensada para gerar resultados reais e impactar diretamente o crescimento do negócio.'},
-            {icon:'fa-lightbulb', title:'Clareza e Eficiência', text:'Somos organizados, objetivos e orientados por dados. Valorizamos processos bem estruturados que entregam valor com agilidade e precisão.'},
-            {icon:'fa-rocket', title:'Inovação com Propósito', text:'Acreditamos na criatividade que resolve problemas. Buscamos soluções inovadoras que fazem sentido para cada cenário e impulsionam vantagem competitiva.'},
-            {icon:'fa-chart-line', title:'Resultados Acima de Tudo', text:'Nosso compromisso é com o crescimento. Trabalhamos com metas claras, foco em performance e ações que fazem a diferença no seu faturamento.'}
+            {icon:'fa-brain', title:t('about.pillars.0.title'), text:t('about.pillars.0.text')},
+            {icon:'fa-lightbulb', title:t('about.pillars.1.title'), text:t('about.pillars.1.text')},
+            {icon:'fa-rocket', title:t('about.pillars.2.title'), text:t('about.pillars.2.text')},
+            {icon:'fa-chart-line', title:t('about.pillars.3.title'), text:t('about.pillars.3.text')}
           ].map((c) => (
             <div key={c.title} className="bg-gradient-to-br from-octo-blue/90 to-octo-blue/80 p-6 rounded-xl border border-octo-yellow/20 shadow-lg hover:shadow-octo-yellow/10 transition-all group">
               <div className="flex items-center mb-4">
