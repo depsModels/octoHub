@@ -1,0 +1,39 @@
+"use client";
+import { useLanguage } from '@/hooks/useLanguage';
+import { useTranslation } from '../lib/i18n/useTranslation';
+
+export default function Header({ menuActive, setMenuActive }: { menuActive: boolean; setMenuActive: (v: boolean) => void }) {
+  const { language, toggleLanguage } = useLanguage();
+  const { t } = useTranslation();
+  return (
+    <div className="container mx-auto px-4 py-6">
+      <div className="flex justify-between items-center">
+        <a href="#" className="flex items-center">
+          <img src="/assets/logos/logo.png" alt="octo.hub Logo" className="mr-2" width={250} height={80} />
+        </a>
+        <nav className="hidden md:flex items-center space-x-8">
+          <a href="#porque-escolher" className="text-octo-yellow hover:text-white transition-colors font-medium xl:text-lg">{t('nav.why')}</a>
+          <a href="#sobre" className="text-octo-yellow hover:text-white transition-colors font-medium xl:text-lg">{t('nav.services')}</a>
+          <a href="#quem-somos" className="text-octo-yellow hover:text-white transition-colors font-medium xl:text-lg">{t('nav.about')}</a>
+          <a href="#contato" className="bg-octo-green text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition-colors font-medium xl:text-lg">{t('nav.contact')}</a>
+          <button onClick={toggleLanguage} className="ml-8 flex items-center text-octo-yellow hover:text-white transition-colors" aria-label="Switch language">
+            <span className="mr-2 text-lg">{language === 'pt-BR' ? '🇺🇸' : '🇧🇷'}</span>
+            <span className="text-sm font-medium">{language === 'pt-BR' ? 'EN' : 'PT'}</span>
+          </button>
+        </nav>
+      </div>
+      <div className="hamburger-wrapper">
+        <div className="hamburger-button bg-octo-green" onClick={() => setMenuActive(!menuActive)}>
+          <span className={`hamburger-icon ${menuActive ? 'active' : ''}`}></span>
+        </div>
+      </div>
+      <nav id="mobile-menu" className={`${menuActive ? 'active' : ''} md:hidden`}>
+        <a href="#porque-escolher" className="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style={{ ['--i' as any]: 1 }}>{t('nav.why')}</a>
+        <a href="#sobre" className="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style={{ ['--i' as any]: 2 }}>{t('nav.services')}</a>
+        <a href="#quem-somos" className="text-octo-yellow hover:text-white transition-colors text-xl mb-6" style={{ ['--i' as any]: 3 }}>{t('nav.about')}</a>
+        <a href="#contato" className="bg-octo-green text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors text-center text-xl cta-button" style={{ ['--i' as any]: 4 }}>{t('nav.contact')}</a>
+        <button onClick={toggleLanguage} className="flex items-center text-octo-yellow hover:text-white transition-colors text-xl mb-6" style={{ ['--i' as any]: 5 }} aria-label="Switch language"><span className="mr-2 text-lg">{language === 'pt-BR' ? '🇺🇸' : '🇧🇷'}</span><span>{language === 'pt-BR' ? 'English' : 'Português'}</span></button>
+      </nav>
+    </div>
+  );
+}
