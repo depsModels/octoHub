@@ -1,380 +1,50 @@
-/* Main layout */
-main {
-  position: relative;
-  z-index: 10;
-}
-
-/* Color variables */
-:root {
-  --octo-blue: #152d35;
-  --octo-green: #03493d;
-  --octo-yellow: #f9f9e0;
-}
-
-/* Mobile menu */
-.hamburger-wrapper {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .hamburger-wrapper {
-    display: block;
-  }
-}
-
-.hamburger-button {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hamburger-button:hover {
-  transform: scale(1.05);
-}
-
-.hamburger-icon {
-  position: relative;
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-
-.hamburger-icon::before,
-.hamburger-icon::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-
-.hamburger-icon::before {
-  transform: translateY(-8px);
-}
-
-.hamburger-icon::after {
-  transform: translateY(8px);
-}
-
-.hamburger-button.active .hamburger-icon {
-  background-color: transparent;
-}
-
-.hamburger-button.active .hamburger-icon::before {
-  transform: translateY(0) rotate(45deg);
-}
-
-.hamburger-button.active .hamburger-icon::after {
-  transform: translateY(0) rotate(-45deg);
-}
-
-#mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #0e2026;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: all 0.3s ease;
-}
-
-#mobile-menu.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-#mobile-menu a {
-  margin: 0 0 20px 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-  transition-delay: calc(0.1s * var(--i, 1));
-}
-
-#mobile-menu a:last-child {
-  margin-bottom: 0;
-}
-
-#mobile-menu.active a {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Form focus effects */
-.input-focus-effect {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(249, 249, 224, 0);
-  border-radius: 0.5rem;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.group-focus-within .input-focus-effect {
-  border-color: rgba(249, 249, 224, 0.3);
-  box-shadow: 0 0 10px rgba(249, 249, 224, 0.1);
-}
-
-/* Sistema de partículas para efeitos visuais */
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Estilos para seção "Por que escolher" */
-#porque-escolher {
-  position: relative;
-  overflow: hidden;
-}
-
-#porque-escolher h2 .highlight {
-  position: relative;
-  display: inline-block;
-}
-
-#porque-escolher h2 .highlight::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--octo-yellow), transparent);
-  opacity: 0.7;
-}
-
-#porque-escolher .card-item {
-  transition: all 0.3s ease-out;
-  overflow: hidden;
-  z-index: 1;
-}
-
-#porque-escolher .card-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(3, 73, 61, 0.1) 0%, rgba(249, 249, 224, 0.05) 100%);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-#porque-escolher .card-item:hover::before {
-  opacity: 1;
-}
-
-#porque-escolher .icon-container {
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
-}
-
-#porque-escolher .card-item:hover .icon-container {
-  transform: scale(1.1);
-}
-
-/* Nova estrutura vertical para os cards */
-#porque-escolher .flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-#porque-escolher .space-y-6 > * + * {
-  margin-top: 1.5rem;
-}
-
-@media (max-width: 480px) {
-  #porque-escolher .space-y-6 > * + * {
-    margin-top: 1rem;
-  }
-
-  #porque-escolher .flex-col-reverse {
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  #porque-escolher .space-y-6 > * + * {
-    margin-top: 1.25rem;
-  }
-}
-
-/* Ajustes específicos para cada breakpoint */
-@media (max-width: 640px) {
-  #porque-escolher h3 {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  #porque-escolher p {
-    font-size: 0.875rem;
-  }
-
-  #porque-escolher .w-10 {
-    width: 2.25rem;
-  }
-
-  #porque-escolher .h-10 {
-    height: 2.25rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  #porque-escolher .flex-col-reverse {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* Layout em duas colunas para desktop */
-  #porque-escolher .lg\:flex-row {
-    align-items: stretch;
-  }
-
-  #porque-escolher .lg\:w-1\/2 {
-    max-width: 48%; /* Um pouco menos que 50% para garantir espaçamento */
-  }
-}
-
-/* Ajuste de altura para os cards para ficarem mais uniformes */
-#porque-escolher .flex-col > div {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Estilos aprimorados para carrossel de logos */
-.logos-carousel-container {
-  position: relative;
-  width: 100%;
-  padding: 30px 0;
-  overflow: hidden;
-  backdrop-filter: blur(5px);
-  border-radius: 12px;
-}
-
-.logos-carousel {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: nowrap;
-  transition: transform 0.5s ease-out;
-  padding: 10px 20px;
-}
-
-.partner-logo {
-  transition: all 0.5s ease;
-  flex: 0 0 auto;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 15px;
-  z-index: 2;
-}
-
-.partner-logo img {
-  transition: all 0.5s ease;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-/* Efeitos adicionais para elementos de destaque */
-.highlight-border {
-  position: relative;
-  overflow: hidden;
-}
-
-.highlight-border::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(249, 249, 224, 0.2), transparent);
-  transition: left 0.8s ease;
-}
-
-.highlight-border:hover::after {
-  left: 100%;
-}
-
-/* Efeitos de animação para elementos */
-.animate-fade-in {
-  animation: fadeIn 1.2s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Media queries para responsividade em diferentes tamanhos de tela */
-@media (max-width: 640px) {
-  .logos-carousel-container {
-    padding: 20px 0;
-  }
-
-  .partner-logo {
-    padding: 10px;
-    margin: 0 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  #porque-escolher .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .partner-logo img {
-    max-height: 60px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .partner-logo img {
-    max-height: 70px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .partner-logo img {
-    max-height: 80px;
-  }
-}
+main { position: relative; z-index: 10; }
+:root { --octo-blue: #152d35; --octo-green: #03493d; --octo-yellow: #f9f9e0; }
+.hamburger-wrapper { position: fixed; top: 20px; right: 20px; z-index: 1000; display: none; }
+@media (max-width: 768px) { .hamburger-wrapper { display: block; } }
+.hamburger-button { width: 48px; height: 48px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,.3); display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all .3s ease; }
+.hamburger-button:hover { transform: scale(1.05); }
+.hamburger-icon { position: relative; width: 24px; height: 2px; background-color: #fff; transition: all .3s ease; }
+.hamburger-icon::before, .hamburger-icon::after { content: ''; position: absolute; width: 24px; height: 2px; background-color: #fff; transition: all .3s ease; }
+.hamburger-icon::before { transform: translateY(-8px); }
+.hamburger-icon::after { transform: translateY(8px); }
+.hamburger-button.active .hamburger-icon { background-color: transparent; }
+.hamburger-button.active .hamburger-icon::before { transform: translateY(0) rotate(45deg); }
+.hamburger-button.active .hamburger-icon::after { transform: translateY(0) rotate(-45deg); }
+#mobile-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #0e2026; z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transform: translateY(-20px); transition: all .3s ease; }
+#mobile-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+#mobile-menu a { margin: 0 0 20px 0; opacity: 0; transform: translateY(20px); transition: all .3s ease; transition-delay: calc(0.1s * var(--i, 1)); }
+#mobile-menu a:last-child { margin-bottom: 0; }
+#mobile-menu.active a { opacity: 1; transform: translateY(0); }
+.input-focus-effect { position: absolute; inset: 0; border: 1px solid rgba(249,249,224,0); border-radius: .5rem; pointer-events: none; transition: all .3s ease; }
+.group-focus-within .input-focus-effect { border-color: rgba(249,249,224,.3); box-shadow: 0 0 10px rgba(249,249,224,.1); }
+.particle { position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; }
+#porque-escolher { position: relative; overflow: hidden; }
+#porque-escolher h2 .highlight { position: relative; display: inline-block; }
+#porque-escolher h2 .highlight::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--octo-yellow), transparent); opacity: .7; }
+#porque-escolher .card-item { transition: all .3s ease-out; overflow: hidden; z-index: 1; }
+#porque-escolher .card-item::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(3,73,61,.1) 0%, rgba(249,249,224,.05) 100%); z-index: -1; opacity: 0; transition: opacity .5s ease; }
+#porque-escolher .card-item:hover::before { opacity: 1; }
+#porque-escolher .icon-container { transition: all .3s ease; position: relative; z-index: 2; }
+#porque-escolher .card-item:hover .icon-container { transform: scale(1.1); }
+#porque-escolher .flex-col { display: flex; flex-direction: column; }
+#porque-escolher .space-y-6 > * + * { margin-top: 1.5rem; }
+@media (max-width: 480px) { #porque-escolher .space-y-6 > * + * { margin-top: 1rem; } #porque-escolher .flex-col-reverse { gap: 2rem; } }
+@media (min-width: 481px) and (max-width: 768px) { #porque-escolher .space-y-6 > * + * { margin-top: 1.25rem; } }
+@media (max-width: 640px) { #porque-escolher h3 { font-size: 1rem; line-height: 1.4; } #porque-escolher p { font-size: .875rem; } #porque-escolher .w-10 { width: 2.25rem; } #porque-escolher .h-10 { height: 2.25rem; } }
+@media (min-width: 768px) and (max-width: 1023px) { #porque-escolher .flex-col-reverse { max-width: 90%; margin-left: auto; margin-right: auto; } }
+@media (min-width: 1024px) { #porque-escolher .lg\:flex-row { align-items: stretch; } #porque-escolher .lg\:w-1\/2 { max-width: 48%; } }
+#porque-escolher .flex-col > div { display: flex; flex-direction: column; height: 100%; }
+.logos-carousel-container { position: relative; width: 100%; padding: 30px 0; overflow: hidden; backdrop-filter: blur(5px); border-radius: 12px; }
+.logos-carousel { display: flex; gap: 2.5rem; flex-wrap: nowrap; transition: transform .5s ease-out; padding: 10px 20px; }
+.partner-logo { transition: all .5s ease; flex: 0 0 auto; padding: 15px; display: flex; justify-content: center; align-items: center; margin: 0 15px; z-index: 2; }
+.partner-logo img { transition: all .5s ease; max-width: 100%; height: auto; object-fit: contain; filter: brightness(0) invert(1); }
+.highlight-border { position: relative; overflow: hidden; }
+.highlight-border::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(249,249,224,.2), transparent); transition: left .8s ease; }
+.highlight-border:hover::after { left: 100%; }
+.animate-fade-in { animation: fadeIn 1.2s forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 640px) { .logos-carousel-container { padding: 20px 0; } .partner-logo { padding: 10px; margin: 0 10px; } }
+@media (max-width: 768px) { #porque-escolher .card-grid { grid-template-columns: 1fr; } .partner-logo img { max-height: 60px; } }
+@media (min-width: 768px) and (max-width: 1024px) { .partner-logo img { max-height: 70px; } }
+@media (min-width: 1024px) { .partner-logo img { max-height: 80px; } }

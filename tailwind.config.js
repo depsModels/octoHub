@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./*.html', './src/**/*.{js,jsx,ts,tsx}'],
+export default {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx,mdx}'
+  ],
   theme: {
     extend: {
       colors: {
@@ -9,12 +11,10 @@ module.exports = {
         'octo-yellow': '#F9F9E0'
       },
       fontFamily: {
-        bebas: ['"Bebas Neue"', 'sans-serif'],
-        space: ['"Space Grotesk"', 'sans-serif'],
-        archivo: ['"Archivo Black"', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-        opensans: ['"Open Sans"', 'sans-serif']
+        bebas: ['var(--font-bebas)', 'sans-serif'],
+        space: ['var(--font-space)', 'sans-serif'],
+        archivo: ['var(--font-archivo)', 'sans-serif'],
+        inter: ['var(--font-inter)', 'sans-serif']
       }
     }
   },
