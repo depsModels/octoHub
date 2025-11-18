@@ -1,20 +1,10 @@
 # OctoHub — Aplicação Next.js para Marketing Digital
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.en.md)
-
 ![OctoHub Logo](public/assets/logos/logo.png)
 
 ## 📋 Descrição
 
 OctoHub é uma aplicação construída com Next.js (App Router) focada em captação de clientes e crescimento de negócios. O projeto prioriza performance, SEO, experiência do usuário e internacionalização (PT/EN), seguindo uma abordagem mobile-first.
-
-### 🚀 Destaques
-
-- Arquitetura com Next.js 14 (App Router)
-- Internacionalização com JSON e `useTranslation`
-- Design system com Tailwind CSS e fontes via `next/font`
-- Componentes acessíveis e responsivos
-- Performance otimizada e SEO semântico
 
 ## 🛠️ Tecnologias Utilizadas
 
