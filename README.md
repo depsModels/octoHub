@@ -85,6 +85,6 @@ octoHub/
    npm run dev
    ```
 
-—
+---
 
 Desenvolvido com 💙 pelo time Deps Models

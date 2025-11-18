@@ -59,7 +59,7 @@ octoHub/
 └── README.en.md
 ```
 
-## 📦 Prerequisites
+## 📦 Pre requisites
 
 - [Node.js](https://nodejs.org/) 18.17+ (recommended)
 - [npm](https://www.npmjs.com/) 9+
@@ -85,6 +85,6 @@ octoHub/
    npm run dev
    ```
 
-—
+---
 
 Developed with 💙 by the Deps Models team
